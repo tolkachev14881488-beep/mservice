@@ -159,7 +159,7 @@ html, body { margin: 0; }
   min-height: max(520px, 82svh);
   padding: calc(var(--hdr) + 32px) 0 96px;
 }
-#ms-root .hero-home .hero-photo { object-position: 60% center; }
+#ms-root .hero-home .hero-photo { object-position: center 30%; }
 #ms-root .hero-page {
   min-height: max(320px, 48svh);
   padding: calc(var(--hdr) + 28px) 0 48px;
