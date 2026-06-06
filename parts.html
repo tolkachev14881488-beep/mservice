@@ -2,18 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Автозапчасти — MService Гомель</title>
-  <meta name="description" content="Продажа автозапчастей в Гомеле. Подбор по VIN за 15 минут. Оригинал и аналоги." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Запчасти — MService Гомель</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link rel="stylesheet" href="./styles.css?v=9" />
 </head>
 <body data-page="parts">
 <div id="ms-root">
-  <header class="site-header">
-    <div class="container head">
+  <header class="site-header on-hero">
+    <div class="wrap head">
       <a href="./index.html" class="logo"><span class="logo-text">M<span>Service</span></span><span class="logo-tag">Гомель</span></a>
-      <nav class="nav-desktop">
+      <nav class="nav">
         <a href="./index.html" data-nav="home">Главная</a>
         <a href="./services.html" data-nav="services">Услуги</a>
         <a href="./parts.html" data-nav="parts">Запчасти</a>
@@ -21,77 +20,72 @@
         <a href="./booking.html" data-nav="booking">Запись</a>
         <a href="./contacts.html" data-nav="contacts">Контакты</a>
       </nav>
-      <div class="head-actions">
+      <div class="head-right">
         <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
         <a class="btn btn-primary btn-sm" href="./booking.html">Заказать</a>
         <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-inner">
-      <a href="./index.html" data-nav="home">Главная</a>
-      <a href="./services.html" data-nav="services">Услуги</a>
-      <a href="./parts.html" data-nav="parts">Запчасти</a>
-      <a href="./about.html" data-nav="about">О нас</a>
-      <a href="./booking.html" data-nav="booking">Запись</a>
-      <a href="./contacts.html" data-nav="contacts">Контакты</a>
-    </div>
-  </div>
+  <div class="mobile-nav" id="mobileNav"><div class="mobile-nav-panel">
+    <a href="./index.html" data-nav="home">Главная</a><a href="./services.html" data-nav="services">Услуги</a>
+    <a href="./parts.html" data-nav="parts">Запчасти</a><a href="./about.html" data-nav="about">О нас</a>
+    <a href="./booking.html" data-nav="booking">Запись</a><a href="./contacts.html" data-nav="contacts">Контакты</a>
+  </div></div>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
+    <section class="hero hero-sm" style="background-image:url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&q=80')">
+      <div class="wrap hero-inner">
         <p class="breadcrumb"><a href="./index.html">Главная</a> / Запчасти</p>
-        <h1>Автозапчасти с подбором по VIN</h1>
-        <p>Оригинал или проверенный аналог — подберём за 15 минут.</p>
+        <h1>Автозапчасти <em>по VIN</em></h1>
+        <p class="hero-lead">Оригинал или аналог — подберём за 15 минут и доставим под ремонт.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
+    <section class="sec sec-white">
+      <div class="wrap">
         <div class="grid-3">
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3z"/></svg></div><h3>Фильтры</h3><p>Масляные, воздушные, салонные</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6H5.5L3 12v8h18v-8L18.92 6z"/></svg></div><h3>Ходовая часть</h3><p>Стойки, рычаги, сайлентблоки</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M19.43 13l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7 7 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4l-.38 2.65c-.62.24-1.21.56-1.7.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64L7.57 13H19.43z"/></svg></div><h3>Двигатель</h3><p>Ремни, помпы, прокладки, датчики</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M15 7H9V5h6v2z"/></svg></div><h3>Электрика</h3><p>АКБ, генераторы, стартеры, свечи</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg></div><h3>Редкие позиции</h3><p>Заказ под конкретный ремонт</p></article>
+          <article class="img-card"><div class="img-card-pic"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500&q=80" alt="" loading="lazy" /></div><div class="img-card-body"><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы</p></div></article>
+          <article class="img-card"><div class="img-card-pic"><img src="https://images.unsplash.com/photo-1619642751034-765df43c7869?w=500&q=80" alt="" loading="lazy" /></div><div class="img-card-body"><h3>Фильтры</h3><p>Масляные, воздушные, салонные</p></div></article>
+          <article class="img-card"><div class="img-card-pic"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=500&q=80" alt="" loading="lazy" /></div><div class="img-card-body"><h3>Ходовая</h3><p>Стойки, рычаги, сайлентблоки</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section section-white">
-      <div class="container page-layout">
-        <div>
-          <div class="section-head"><h2>Как заказать</h2></div>
-          <ol style="padding-left:20px;color:var(--muted);display:grid;gap:12px;font-weight:600">
-            <li>Оставьте заявку с VIN или маркой авто</li>
-            <li>Мы подберём оригинал или аналог за 15 минут</li>
-            <li>Согласуем цену и срок поставки</li>
-            <li>Можем установить у нас в сервисе</li>
-          </ol>
+    <section class="sec">
+      <div class="wrap layout-2">
+        <div class="split-text" style="border-radius:var(--radius);box-shadow:0 12px 40px rgba(0,0,0,0.08)">
+          <h2>Как заказать</h2>
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Оставьте VIN или марку авто</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Подбор за 15 минут</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Установка в нашем сервисе</li>
+          </ul>
         </div>
-        <div class="card form-box">
-          <h3 style="margin-bottom:16px;font-size:1.05rem">Заказать запчасти</h3>
+        <div class="form-panel">
+          <h3 style="margin-bottom:16px;font-size:1.1rem">Заявка на запчасти</h3>
           <form id="mainForm">
             <input type="hidden" id="requestType" value="Запчасти" />
-            <div class="ig"><input id="userName" type="text" placeholder="Имя *" required /></div>
-            <div class="ig"><input id="userPhone" type="tel" placeholder="Телефон *" required /></div>
-            <div class="ig"><input id="carModel" type="text" placeholder="Марка / VIN" /></div>
-            <div class="ig"><textarea id="issueDesc" placeholder="Какие запчасти нужны"></textarea></div>
-            <button class="btn btn-primary" type="submit" style="width:100%">Отправить заявку</button>
-            <div class="form-feedback" id="formFeedback"></div>
+            <div class="fld"><input id="userName" type="text" placeholder="Имя *" required /></div>
+            <div class="fld"><input id="userPhone" type="tel" placeholder="Телефон *" required /></div>
+            <div class="fld"><input id="carModel" type="text" placeholder="Марка / VIN" /></div>
+            <div class="fld"><textarea id="issueDesc" placeholder="Какие запчасти нужны"></textarea></div>
+            <button class="btn btn-primary" type="submit" style="width:100%">Отправить</button>
+            <div class="form-msg" id="formFeedback"></div>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom" style="border:0;padding:0"><span>© 2026 MService — Гомель</span><a href="./contacts.html">Контакты</a></div>
-  </footer>
+  <footer class="footer"><div class="wrap footer-bot"><span>© 2026 MService</span></div></footer>
+  <nav class="mob-bar">
+    <a href="./index.html"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>Главная</a>
+    <a href="./parts.html" class="on"><svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>Запчасти</a>
+    <a href="./booking.html"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>Запись</a>
+    <a href="tel:+375339116611"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Звонок</a>
+  </nav>
 </div>
-<script src="./main.js?v=8"></script>
+<script src="./main.js?v=9"></script>
 </body>
 </html>

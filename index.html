@@ -2,23 +2,21 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>MService — Автосервис в Гомеле</title>
-  <meta name="description" content="Ремонт авто в Гомеле: диагностика, ДВС, подвеска, запчасти. Гарантия 12 мес, смета до работ." />
+  <meta name="description" content="Ремонт авто в Гомеле. Диагностика, ДВС, подвеска, запчасти. Гарантия 12 мес." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link rel="stylesheet" href="./styles.css?v=9" />
 </head>
 <body data-page="home">
 <div id="ms-root">
-  <header class="site-header">
-    <div class="container head">
-      <a href="./index.html" class="logo">
-        <span class="logo-text">M<span>Service</span></span>
-        <span class="logo-tag">автосервис · Гомель</span>
-      </a>
-      <nav class="nav-desktop" aria-label="Меню">
+  <header class="site-header on-hero">
+    <div class="wrap head">
+      <a href="./index.html" class="logo"><span class="logo-text">M<span>Service</span></span><span class="logo-tag">Гомель</span></a>
+      <nav class="nav">
         <a href="./index.html" data-nav="home">Главная</a>
         <a href="./services.html" data-nav="services">Услуги</a>
         <a href="./parts.html" data-nav="parts">Запчасти</a>
@@ -26,7 +24,7 @@
         <a href="./booking.html" data-nav="booking">Запись</a>
         <a href="./contacts.html" data-nav="contacts">Контакты</a>
       </nav>
-      <div class="head-actions">
+      <div class="head-right">
         <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
         <a class="btn btn-primary btn-sm" href="./booking.html">Записаться</a>
         <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -35,127 +33,141 @@
   </header>
 
   <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-inner">
+    <div class="mobile-nav-panel">
       <a href="./index.html" data-nav="home">Главная</a>
       <a href="./services.html" data-nav="services">Услуги</a>
       <a href="./parts.html" data-nav="parts">Запчасти</a>
       <a href="./about.html" data-nav="about">О нас</a>
       <a href="./booking.html" data-nav="booking">Запись</a>
       <a href="./contacts.html" data-nav="contacts">Контакты</a>
-      <a class="btn btn-outline" href="tel:+375339116611">Позвонить</a>
       <a class="btn btn-primary" href="./booking.html">Записаться</a>
     </div>
   </div>
 
   <main>
-    <section class="home-hero">
-      <div class="container home-hero-grid">
-        <div>
-          <span class="home-badge">Перезвоним за 10 минут</span>
-          <h1>Автосервис в Гомеле — <em>честно и с гарантией</em></h1>
-          <p class="home-lead">Ремонт двигателя, подвески, диагностика и запчасти по VIN. Согласуем цену до начала работ — без скрытых доплат.</p>
-          <ul class="home-checks">
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Гарантия 12 месяцев</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>1000+ клиентов</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Ежедневно 09:00–20:00</li>
-          </ul>
-          <div class="home-btns">
-            <a class="btn btn-primary btn-lg" href="./booking.html">Записаться на ремонт</a>
-            <a class="btn btn-outline btn-lg" href="./services.html">Смотреть услуги</a>
-          </div>
+    <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80')">
+      <div class="wrap hero-inner">
+        <span class="hero-badge">● Принимаем заявки сегодня</span>
+        <h1>Автосервис в Гомеле — <em>честный ремонт</em> с гарантией</h1>
+        <p class="hero-lead">Диагностика, двигатель, подвеска и запчасти по VIN. Согласуем цену до начала работ — без скрытых доплат.</p>
+        <div class="hero-btns">
+          <a class="btn btn-primary btn-lg" href="./booking.html">Записаться на ремонт</a>
+          <a class="btn btn-ghost btn-lg" href="tel:+375339116611">Позвонить сейчас</a>
         </div>
-        <div class="card hero-card">
-          <h3>Бесплатная консультация</h3>
-          <p>Оставьте номер — перезвоним и назовём ориентир по цене</p>
+      </div>
+    </section>
+
+    <div class="wrap hero-float">
+      <div class="float-bar">
+        <div class="float-item"><strong>12</strong><span>мес гарантия</span></div>
+        <div class="float-item"><strong>1000+</strong><span>клиентов</span></div>
+        <div class="float-item"><strong>4+</strong><span>года работы</span></div>
+        <div class="float-item"><strong>10 мин</strong><span>перезвон</span></div>
+      </div>
+    </div>
+
+    <section class="sec sec-white">
+      <div class="wrap">
+        <div class="sec-head center">
+          <span class="sec-tag">Услуги</span>
+          <h2>Что делаем в сервисе</h2>
+          <p>Реальные работы — с фото и прозрачными ценами</p>
+        </div>
+        <div class="grid-3">
+          <article class="img-card">
+            <div class="img-card-pic"><img src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?w=600&q=80" alt="Диагностика" loading="lazy" /><span class="price-badge">от 30 BYN</span></div>
+            <div class="img-card-body"><h3>Диагностика</h3><p>Компьютерная проверка, точный план ремонта</p><div class="img-card-foot"><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a><a class="btn btn-sm btn-dark" href="./services.html">Подробнее</a></div></div>
+          </article>
+          <article class="img-card">
+            <div class="img-card-pic"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80" alt="Двигатель" loading="lazy" /><span class="price-badge">от 150 BYN</span></div>
+            <div class="img-card-body"><h3>Ремонт двигателя</h3><p>Текущий и капитальный ремонт ДВС</p><div class="img-card-foot"><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a><a class="btn btn-sm btn-dark" href="./services.html">Подробнее</a></div></div>
+          </article>
+          <article class="img-card">
+            <div class="img-card-pic"><img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&q=80" alt="Подвеска" loading="lazy" /><span class="price-badge">от 50 BYN</span></div>
+            <div class="img-card-body"><h3>Ремонт подвески</h3><p>Стойки, рычаги, сайлентблоки, развал</p><div class="img-card-foot"><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a><a class="btn btn-sm btn-dark" href="./services.html">Подробнее</a></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="img-band" style="background-image:url('https://images.unsplash.com/photo-1619642751034-765df43c7869?w=1920&q=80')">
+      <div class="wrap img-band-inner">
+        <h2>Не знаете, в чём проблема?</h2>
+        <p>Начните с диагностики — мастер найдёт причину и предложит оптимальный ремонт без лишних работ.</p>
+        <a class="btn btn-primary" href="./booking.html">Записаться на диагностику</a>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="wrap split">
+        <div class="split-img" style="background-image:url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=900&q=80')"></div>
+        <div class="split-text">
+          <span class="sec-tag">Запчасти</span>
+          <h2>Подбор по VIN за 15 минут</h2>
+          <p>Оригинал или проверенный аналог — подберём и можем установить у нас в сервисе.</p>
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Масла, фильтры, ходовая</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Двигатель и электрика</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Редкие позиции под заказ</li>
+          </ul>
+          <a class="btn btn-primary" href="./parts.html">Заказать запчасти</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-white">
+      <div class="wrap">
+        <div class="sec-head center"><span class="sec-tag">Отзывы</span><h2>Клиенты о нас</h2></div>
+        <div class="grid-3">
+          <article class="rev-card"><div class="rev-stars">★★★★★</div><p>Сделали двигатель в срок, всё по цене как договорились. Рекомендую.</p><div class="rev-name">Дмитрий</div></article>
+          <article class="rev-card"><div class="rev-stars">★★★★★</div><p>Нашли проблему подвески, которую другие пропустили. Качество отличное.</p><div class="rev-name">Александр</div></article>
+          <article class="rev-card"><div class="rev-stars">★★★★☆</div><p>Быстрое ТО, адекватные цены, без навязывания лишнего.</p><div class="rev-name">Сергей</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-dark">
+      <div class="wrap layout-2">
+        <div>
+          <span class="sec-tag">Запись</span>
+          <h2 style="color:#fff;margin-bottom:12px">Оставьте номер — перезвоним</h2>
+          <p style="color:rgba(255,255,255,0.7);margin-bottom:20px">Консультация бесплатно. Подберём время в сервисе.</p>
           <form id="heroForm">
-            <div class="ig"><input id="heroName" type="text" placeholder="Ваше имя *" required /></div>
-            <div class="ig"><input id="heroPhone" type="tel" placeholder="Телефон *" required /></div>
-            <div class="ig"><input id="heroCar" type="text" placeholder="Марка авто" /></div>
+            <div class="fld"><input id="heroName" type="text" placeholder="Имя *" required /></div>
+            <div class="fld"><input id="heroPhone" type="tel" placeholder="Телефон *" required /></div>
+            <div class="fld"><input id="heroCar" type="text" placeholder="Марка авто" /></div>
             <button class="btn btn-primary" type="submit" style="width:100%">Получить звонок</button>
-            <div class="form-feedback" id="heroFeedback"></div>
+            <div class="form-msg" id="heroFeedback"></div>
           </form>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-head center">
-          <span class="sec-label">Почему мы</span>
-          <h2>Надёжный сервис без сюрпризов</h2>
-        </div>
-        <div class="grid-4">
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg></div><h3>12 мес гарантия</h3><p>На все выполненные работы</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></div><h3>Смета до работ</h3><p>Цена фиксируется заранее</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div><h3>1000+ клиентов</h3><p>Реальные отзывы в Гомеле</p></article>
-          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg></div><h3>Быстрый ответ</h3><p>Перезвон за 10 минут</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="sec-label">Услуги</span>
-          <h2>Популярные работы</h2>
-          <p>Диагностика, двигатель, подвеска, ТО — полный список на отдельной странице.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card svc-card"><h3>Диагностика</h3><p>Точный поиск неисправности</p><div class="svc-foot"><span class="price">от 30 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
-          <article class="card svc-card"><h3>Ремонт двигателя</h3><p>Текущий и капитальный ремонт ДВС</p><div class="svc-foot"><span class="price">от 150 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
-          <article class="card svc-card"><h3>Ремонт подвески</h3><p>Стойки, рычаги, сайлентблоки</p><div class="svc-foot"><span class="price">от 50 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
-        </div>
-        <p style="text-align:center;margin-top:28px"><a class="btn btn-outline" href="./services.html">Все услуги и цены →</a></p>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-head center">
-          <span class="sec-label">Отзывы</span>
-          <h2>Что говорят клиенты</h2>
-        </div>
-        <div class="grid-3">
-          <article class="card review-card"><div class="review-stars">★★★★★</div><p>Сделали двигатель в срок, всё объяснили по цене. Без лишних работ.</p><div class="review-author">Дмитрий</div></article>
-          <article class="card review-card"><div class="review-stars">★★★★★</div><p>Нашли проблему подвески, которую другие пропустили. Рекомендую.</p><div class="review-author">Александр</div></article>
-          <article class="card review-card"><div class="review-stars">★★★★☆</div><p>Быстрое ТО, адекватные цены. Буду обращаться ещё.</p><div class="review-author">Сергей</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container cta-band">
-        <div>
-          <h2>Нужен ремонт? Запишитесь сейчас</h2>
-          <p>Перезвоним за 10 минут, подберём время и назовём ориентир по стоимости.</p>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn btn-white" href="./booking.html">Онлайн-запись</a>
-          <a class="btn btn-outline" href="tel:+375339116611">Позвонить</a>
+        <div class="photo-row" style="height:340px">
+          <div class="photo-cell big"><img src="https://images.unsplash.com/photo-1619642751034-765df43c7869?w=800&q=80" alt="Сервис" loading="lazy" /><div class="photo-cap"><strong>Наш бокс</strong></div></div>
+          <div class="photo-stack">
+            <div class="photo-cell"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&q=80" alt="Ремонт" loading="lazy" /></div>
+            <div class="photo-cell"><img src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?w=400&q=80" alt="Диагностика" loading="lazy" /></div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <span class="logo-text">M<span>Service</span></span>
-        <p>Автосервис и автозапчасти в Гомеле. Ремонт, диагностика, гарантия 12 месяцев.</p>
-      </div>
-      <div class="footer-col"><h4>Страницы</h4><a href="./services.html">Услуги</a><a href="./parts.html">Запчасти</a><a href="./about.html">О нас</a><a href="./booking.html">Запись</a></div>
-      <div class="footer-col"><h4>Контакты</h4><a href="tel:+375339116611">+375 33 911-66-11</a><a href="./contacts.html">1-я Транзитная 20А</a><a href="https://t.me/mservice_gomel" target="_blank" rel="noopener">Telegram</a></div>
-      <div class="footer-col"><h4>Режим</h4><a href="./contacts.html">Ежедневно 09:00–20:00</a></div>
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><span class="logo-text">M<span>Service</span></span><p>Автосервис и запчасти в Гомеле. Гарантия 12 месяцев на все работы.</p></div>
+      <div><h4>Страницы</h4><a href="./services.html">Услуги</a><a href="./parts.html">Запчасти</a><a href="./about.html">О нас</a></div>
+      <div><h4>Запись</h4><a href="./booking.html">Онлайн-запись</a><a href="tel:+375339116611">+375 33 911-66-11</a></div>
+      <div><h4>Адрес</h4><a href="./contacts.html">1-я Транзитная 20А</a><a href="./contacts.html">09:00 – 20:00</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 MService — Гомель</span><a href="./contacts.html">Контакты</a></div>
+    <div class="wrap footer-bot"><span>© 2026 MService</span><a href="./contacts.html">Контакты</a></div>
   </footer>
 
-  <nav class="mobile-bar">
-    <a href="./index.html" class="active-tab"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>Главная</a>
+  <nav class="mob-bar">
+    <a href="./index.html" class="on"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>Главная</a>
+    <a href="./services.html"><svg viewBox="0 0 24 24"><path d="M19.43 13l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.03 7.03 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4l-.38 2.65c-.62.24-1.21.56-1.7.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64L7.57 13H19.43z"/></svg>Услуги</a>
     <a href="./booking.html"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>Запись</a>
     <a href="tel:+375339116611"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Звонок</a>
   </nav>
 </div>
-<script src="./main.js?v=8"></script>
+<script src="./main.js?v=9"></script>
 </body>
 </html>

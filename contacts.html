@@ -2,18 +2,17 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Контакты — MService Гомель</title>
-  <meta name="description" content="Контакты MService: Гомель, 1-я Транзитная 20А. Телефон +375 33 911-66-11. Ежедневно 09:00–20:00." />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link rel="stylesheet" href="./styles.css?v=9" />
 </head>
 <body data-page="contacts">
 <div id="ms-root">
-  <header class="site-header">
-    <div class="container head">
+  <header class="site-header on-hero">
+    <div class="wrap head">
       <a href="./index.html" class="logo"><span class="logo-text">M<span>Service</span></span><span class="logo-tag">Гомель</span></a>
-      <nav class="nav-desktop">
+      <nav class="nav">
         <a href="./index.html" data-nav="home">Главная</a>
         <a href="./services.html" data-nav="services">Услуги</a>
         <a href="./parts.html" data-nav="parts">Запчасти</a>
@@ -21,75 +20,80 @@
         <a href="./booking.html" data-nav="booking">Запись</a>
         <a href="./contacts.html" data-nav="contacts">Контакты</a>
       </nav>
-      <div class="head-actions">
+      <div class="head-right">
         <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
         <a class="btn btn-primary btn-sm" href="./booking.html">Записаться</a>
         <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-inner">
-      <a href="./index.html" data-nav="home">Главная</a>
-      <a href="./services.html" data-nav="services">Услуги</a>
-      <a href="./parts.html" data-nav="parts">Запчасти</a>
-      <a href="./about.html" data-nav="about">О нас</a>
-      <a href="./booking.html" data-nav="booking">Запись</a>
-      <a href="./contacts.html" data-nav="contacts">Контакты</a>
-    </div>
-  </div>
+  <div class="mobile-nav" id="mobileNav"><div class="mobile-nav-panel">
+    <a href="./index.html" data-nav="home">Главная</a><a href="./services.html" data-nav="services">Услуги</a>
+    <a href="./parts.html" data-nav="parts">Запчасти</a><a href="./about.html" data-nav="about">О нас</a>
+    <a href="./booking.html" data-nav="booking">Запись</a><a href="./contacts.html" data-nav="contacts">Контакты</a>
+  </div></div>
 
   <main>
-    <section class="page-hero">
-      <div class="container">
+    <section class="hero hero-sm" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80')">
+      <div class="wrap hero-inner">
         <p class="breadcrumb"><a href="./index.html">Главная</a> / Контакты</p>
-        <h1>Как нас найти</h1>
-        <p>Гомель, 1-я Транзитная ул., 20А — работаем ежедневно.</p>
+        <h1>Как нас <em>найти</em></h1>
+        <p class="hero-lead">Гомель, 1-я Транзитная 20А — ежедневно с 09:00 до 20:00</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container page-layout">
-        <div class="card" style="padding:28px">
-          <div class="contact-line">
-            <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
+    <section class="sec sec-white">
+      <div class="wrap contact-grid">
+        <div class="form-panel" style="max-width:none">
+          <div class="contact-item">
+            <span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span>
             <div><strong>Адрес</strong><span>Гомель, 1-я Транзитная ул., 20А, 246013</span></div>
           </div>
-          <div class="contact-line">
-            <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span>
+          <div class="contact-item">
+            <span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span>
             <div><strong>Телефон</strong><a href="tel:+375339116611">+375 33 911-66-11</a></div>
           </div>
-          <div class="contact-line">
-            <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg></span>
-            <div><strong>Режим работы</strong><span>Ежедневно 09:00 – 20:00</span></div>
+          <div class="contact-item">
+            <span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg></span>
+            <div><strong>Режим</strong><span>Ежедневно 09:00 – 20:00</span></div>
           </div>
-          <div class="contact-line">
-            <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M9.9 15.5 9.7 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-13.4c.3-1.2-.4-1.7-1.2-1.4L3.6 9.8c-1.1.4-1.1 1 0 1.3l4.5 1.4 10.4-6.5c.5-.3.9-.1.5.2"/></svg></span>
+          <div class="contact-item">
+            <span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M9.9 15.5 9.7 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-13.4c.3-1.2-.4-1.7-1.2-1.4L3.6 9.8c-1.1.4-1.1 1 0 1.3l4.5 1.4 10.4-6.5c.5-.3.9-.1.5.2"/></svg></span>
             <div><strong>Telegram</strong><a href="https://t.me/mservice_gomel" target="_blank" rel="noopener">t.me/mservice_gomel</a></div>
           </div>
-          <div class="contact-line">
-            <span class="contact-icon"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2z"/></svg></span>
+          <div class="contact-item">
+            <span class="contact-ico"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2z"/></svg></span>
             <div><strong>Instagram</strong><a href="https://www.instagram.com/mservice.gomel/" target="_blank" rel="noopener">@mservice.gomel</a></div>
           </div>
-          <a class="btn btn-primary" href="./booking.html" style="width:100%;margin-top:12px">Записаться на ремонт</a>
+          <a class="btn btn-primary" href="./booking.html" style="width:100%;margin-top:8px">Записаться на ремонт</a>
         </div>
-        <div class="map-box card">
-          <iframe src="https://yandex.by/map-widget/v1/?ll=31.006717,52.376257&pt=31.006717,52.376257,pm2dgl&z=18" loading="lazy" allowfullscreen title="Карта MService"></iframe>
+        <div class="map-frame">
+          <iframe src="https://yandex.by/map-widget/v1/?ll=31.006717,52.376257&pt=31.006717,52.376257,pm2dgl&z=18" loading="lazy" allowfullscreen title="Карта"></iframe>
         </div>
       </div>
+    </section>
+
+    <section class="img-band" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80');min-height:280px">
+      <div class="wrap img-band-inner"><h2>Приезжайте в сервис</h2><p>Или оставьте заявку — перезвоним.</p><a class="btn btn-primary" href="./booking.html">Записаться</a></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand"><span class="logo-text">M<span>Service</span></span><p>Автосервис и запчасти в Гомеле</p></div>
-      <div class="footer-col"><h4>Навигация</h4><a href="./services.html">Услуги</a><a href="./parts.html">Запчасти</a><a href="./booking.html">Запись</a></div>
-      <div class="footer-col"><h4>Связь</h4><a href="tel:+375339116611">+375 33 911-66-11</a></div>
-      <div class="footer-col"><h4>Соцсети</h4><a href="https://t.me/mservice_gomel" target="_blank" rel="noopener">Telegram</a></div>
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand"><span class="logo-text">M<span>Service</span></span><p>Автосервис в Гомеле</p></div>
+      <div><h4>Навигация</h4><a href="./services.html">Услуги</a><a href="./parts.html">Запчасти</a></div>
+      <div><h4>Связь</h4><a href="tel:+375339116611">Телефон</a><a href="https://t.me/mservice_gomel" target="_blank" rel="noopener">Telegram</a></div>
+      <div><h4>Запись</h4><a href="./booking.html">Онлайн</a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 MService — Гомель</span></div>
+    <div class="wrap footer-bot"><span>© 2026 MService</span></div>
   </footer>
+  <nav class="mob-bar">
+    <a href="./index.html"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>Главная</a>
+    <a href="./booking.html"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>Запись</a>
+    <a href="./contacts.html" class="on"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>Контакты</a>
+    <a href="tel:+375339116611"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Звонок</a>
+  </nav>
 </div>
-<script src="./main.js?v=8"></script>
+<script src="./main.js?v=9"></script>
 </body>
 </html>
