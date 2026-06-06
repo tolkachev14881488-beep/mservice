@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас — MService Гомель</title>
+  <meta name="description" content="MService — автосервис в Гомеле с 2022 года. 1000+ клиентов, гарантия 12 месяцев." />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=8" />
+</head>
+<body data-page="about">
+<div id="ms-root">
+  <header class="site-header">
+    <div class="container head">
+      <a href="./index.html" class="logo"><span class="logo-text">M<span>Service</span></span><span class="logo-tag">Гомель</span></a>
+      <nav class="nav-desktop">
+        <a href="./index.html" data-nav="home">Главная</a>
+        <a href="./services.html" data-nav="services">Услуги</a>
+        <a href="./parts.html" data-nav="parts">Запчасти</a>
+        <a href="./about.html" data-nav="about">О нас</a>
+        <a href="./booking.html" data-nav="booking">Запись</a>
+        <a href="./contacts.html" data-nav="contacts">Контакты</a>
+      </nav>
+      <div class="head-actions">
+        <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
+        <a class="btn btn-primary btn-sm" href="./booking.html">Записаться</a>
+        <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
+      <a href="./index.html" data-nav="home">Главная</a>
+      <a href="./services.html" data-nav="services">Услуги</a>
+      <a href="./parts.html" data-nav="parts">Запчасти</a>
+      <a href="./about.html" data-nav="about">О нас</a>
+      <a href="./booking.html" data-nav="booking">Запись</a>
+      <a href="./contacts.html" data-nav="contacts">Контакты</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="./index.html">Главная</a> / О нас</p>
+        <h1>О сервисе MService</h1>
+        <p>Профильный автосервис в Гомеле — качество, прозрачность и результат.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container page-layout">
+        <div class="card" style="padding:32px">
+          <p style="color:var(--muted);margin-bottom:14px;line-height:1.75">MService — это автосервис с фокусом на честный ремонт. Каждый автомобиль проходит диагностику, согласование сметы и финальную проверку перед выдачей.</p>
+          <p style="color:var(--muted);line-height:1.75">Мы не навязываем лишнее — предлагаем только то, что действительно нужно вашему авто. Работаем с современным оборудованием и даём гарантию 12 месяцев.</p>
+          <ul class="home-checks" style="margin-top:24px">
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Диагностика перед каждым ремонтом</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Понятная смета без скрытых работ</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Гарантия на выполненные работы</li>
+          </ul>
+        </div>
+        <div class="grid-2" style="grid-template-columns:1fr">
+          <article class="card stat-box"><div class="stat-num">4+</div><div class="stat-lbl">года на рынке</div></article>
+          <article class="card stat-box"><div class="stat-num">1000+</div><div class="stat-lbl">клиентов</div></article>
+          <article class="card stat-box"><div class="stat-num">12</div><div class="stat-lbl">мес гарантия</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-head center"><span class="sec-label">Работы</span><h2>Примеры из нашего сервиса</h2></div>
+        <div class="grid-3">
+          <article class="gallery-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80" alt="Ремонт двигателя" />
+            <div class="gallery-cap"><h3>Капитальный ремонт ДВС</h3><p>Восстановление компрессии, замена узлов</p></div>
+          </article>
+          <article class="gallery-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=800&q=80" alt="Подвеска" />
+            <div class="gallery-cap"><h3>Ремонт подвески</h3><p>Замена элементов + развал</p></div>
+          </article>
+          <article class="gallery-card">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?auto=format&fit=crop&w=800&q=80" alt="Диагностика" />
+            <div class="gallery-cap"><h3>Диагностика</h3><p>Точный план ремонта</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center"><h2>Частые вопросы</h2></div>
+        <details class="card faq-item"><summary>Сколько стоит диагностика?</summary><p>От 30 BYN. Считываем ошибки и даём понятный отчёт с планом ремонта.</p></details>
+        <details class="card faq-item"><summary>Можно узнать цену до приезда?</summary><p>Да — позвоните или оставьте заявку. Точная смета после осмотра авто.</p></details>
+        <details class="card faq-item"><summary>Какая гарантия?</summary><p>12 месяцев на выполненные работы, фиксируем в заказ-наряде.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="border:0"><span>© 2026 MService</span><a href="./booking.html">Записаться</a></div>
+  </footer>
+</div>
+<script src="./main.js?v=8"></script>
+</body>
+</html>

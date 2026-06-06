@@ -2,482 +2,160 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>MService — Автосервис в Гомеле | Запись онлайн, гарантия 12 мес</title>
-  <meta name="description" content="Ремонт авто в Гомеле: диагностика, ДВС, подвеска, запчасти по VIN. Смета до работ, гарантия 12 месяцев. Запишитесь — перезвоним за 10 минут." />
-  <meta name="keywords" content="автосервис Гомель, ремонт двигателя, ремонт подвески, диагностика авто, автозапчасти Гомель, MService" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-  <meta name="author" content="MService" />
-  <link rel="canonical" href="https://mservice.by/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ru_RU" />
-  <meta property="og:site_name" content="MService" />
-  <meta property="og:title" content="MService — Автосервис в Гомеле" />
-  <meta property="og:description" content="Смета до работ, гарантия 12 мес. Запись онлайн — перезвоним за 10 минут." />
-  <meta property="og:url" content="https://mservice.by/" />
-  <meta property="og:image" content="https://optim.tildacdn.ink/tild3837-3036-4834-b830-363433323335/-/format/webp/noroot.png.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MService — Автосервис в Гомеле</title>
+  <meta name="description" content="Ремонт авто в Гомеле: диагностика, ДВС, подвеска, запчасти. Гарантия 12 мес, смета до работ." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=7" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"AutoRepair","name":"MService","url":"https://mservice.by/","telephone":"+375339116611","image":"https://optim.tildacdn.ink/tild3837-3036-4834-b830-363433323335/-/format/webp/noroot.png.webp","address":{"@type":"PostalAddress","streetAddress":"1-я Транзитная ул., 20А","addressLocality":"Гомель","postalCode":"246013","addressCountry":"BY"},"openingHours":"Mo-Su 09:00-20:00","sameAs":["https://t.me/mservice_gomel","https://www.instagram.com/mservice.gomel/"]}
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=8" />
 </head>
-<body>
+<body data-page="home">
 <div id="ms-root">
-  <div class="bg-fx" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="grid-fx"></div>
-  </div>
-  <div class="progress" id="msProgress" aria-hidden="true"></div>
-
-  <div class="scroll-cta" id="scrollCta" aria-hidden="true">
-    <div class="container scroll-cta-inner">
-      <div class="scroll-cta-text">
-        <strong>Нужен ремонт в Гомеле?</strong>
-        <span>Перезвоним за 10 минут · смета до начала работ</span>
-      </div>
-      <div class="scroll-cta-actions">
-        <a class="btn btn-glass btn-sm" href="tel:+375339116611">+375 33 911-66-11</a>
-        <button class="btn btn-primary btn-sm open-modal-btn" type="button">Записаться</button>
-      </div>
-    </div>
-  </div>
-
-  <header class="site-header" id="siteHeader">
+  <header class="site-header">
     <div class="container head">
-      <a href="#home" class="logo">
-        <span class="logo-text" aria-label="MService">M<span>Service</span></span>
-        <span class="logo-tag">Гомель · гарантия 12 мес</span>
+      <a href="./index.html" class="logo">
+        <span class="logo-text">M<span>Service</span></span>
+        <span class="logo-tag">автосервис · Гомель</span>
       </a>
-      <nav class="nav-desktop" aria-label="Основная навигация">
-        <a href="#services">Услуги</a>
-        <a href="#pricing">Цены</a>
-        <a href="#parts">Запчасти</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#booking">Запись</a>
-        <a href="#contacts">Контакты</a>
+      <nav class="nav-desktop" aria-label="Меню">
+        <a href="./index.html" data-nav="home">Главная</a>
+        <a href="./services.html" data-nav="services">Услуги</a>
+        <a href="./parts.html" data-nav="parts">Запчасти</a>
+        <a href="./about.html" data-nav="about">О нас</a>
+        <a href="./booking.html" data-nav="booking">Запись</a>
+        <a href="./contacts.html" data-nav="contacts">Контакты</a>
       </nav>
       <div class="head-actions">
         <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
-        <button class="btn btn-primary btn-sm open-modal-btn" type="button">Записаться</button>
-        <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="btn btn-primary btn-sm" href="./booking.html">Записаться</a>
+        <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-inner">
-      <a href="#services">Услуги</a>
-      <a href="#pricing">Цены</a>
-      <a href="#parts">Запчасти</a>
-      <a href="#process">Как работаем</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#faq">Вопросы</a>
-      <a href="#booking">Запись</a>
-      <a href="#contacts">Контакты</a>
-      <a class="btn btn-glass" href="tel:+375339116611">Позвонить сейчас</a>
-      <button class="btn btn-primary open-modal-btn" type="button">Записаться онлайн</button>
+      <a href="./index.html" data-nav="home">Главная</a>
+      <a href="./services.html" data-nav="services">Услуги</a>
+      <a href="./parts.html" data-nav="parts">Запчасти</a>
+      <a href="./about.html" data-nav="about">О нас</a>
+      <a href="./booking.html" data-nav="booking">Запись</a>
+      <a href="./contacts.html" data-nav="contacts">Контакты</a>
+      <a class="btn btn-outline" href="tel:+375339116611">Позвонить</a>
+      <a class="btn btn-primary" href="./booking.html">Записаться</a>
     </div>
   </div>
 
   <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-visual" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80" alt="" id="heroImg" width="1600" height="1067" />
-        <div class="hero-slice"></div>
-        <div class="hero-glow"></div>
-      </div>
-      <div class="container hero-wrap">
-        <div class="hero-copy">
-          <div class="hero-tag anim-up" style="--i:0">
-            <span class="pulse-dot"></span>
-            Принимаем заявки сегодня · перезвон за 10 мин
-          </div>
-          <h1 class="anim-up" style="--i:1">Ремонт авто в Гомеле <span class="h1-accent">без сюрпризов в счёте</span></h1>
-          <p class="hero-lead anim-up" style="--i:2">Диагностика, двигатель, подвеска и запчасти по VIN. Согласуем смету <strong>до начала работ</strong> — платите только за то, что действительно нужно.</p>
-          <ul class="hero-checks anim-up" style="--i:3">
+    <section class="home-hero">
+      <div class="container home-hero-grid">
+        <div>
+          <span class="home-badge">Перезвоним за 10 минут</span>
+          <h1>Автосервис в Гомеле — <em>честно и с гарантией</em></h1>
+          <p class="home-lead">Ремонт двигателя, подвески, диагностика и запчасти по VIN. Согласуем цену до начала работ — без скрытых доплат.</p>
+          <ul class="home-checks">
             <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Гарантия 12 месяцев</li>
             <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>1000+ клиентов</li>
-            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Работаем ежедневно 09:00–20:00</li>
+            <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Ежедневно 09:00–20:00</li>
           </ul>
-          <div class="hero-actions anim-up" style="--i:4">
-            <button class="btn btn-primary btn-lg open-modal-btn" type="button"><span>Записаться на ремонт</span></button>
-            <a class="btn btn-glass btn-lg" href="tel:+375339116611"><span>Позвонить сейчас</span></a>
+          <div class="home-btns">
+            <a class="btn btn-primary btn-lg" href="./booking.html">Записаться на ремонт</a>
+            <a class="btn btn-outline btn-lg" href="./services.html">Смотреть услуги</a>
           </div>
         </div>
-        <aside class="hero-form-card glass anim-up" style="--i:5">
-          <div class="hfc-head">
-            <strong>Бесплатная консультация</strong>
-            <span>Оставьте номер — перезвоним и назовём ориентир по цене</span>
-          </div>
-          <form id="heroForm" class="hero-form">
-            <div class="ig"><input id="heroName" type="text" placeholder="Ваше имя *" required autocomplete="name" /></div>
-            <div class="ig"><input id="heroPhone" type="tel" placeholder="Телефон * (+375)" required autocomplete="tel" /></div>
-            <div class="ig"><input id="heroCar" type="text" placeholder="Марка и модель авто" autocomplete="off" /></div>
-            <button class="btn btn-primary" type="submit" style="width:100%">Получить звонок мастера</button>
-            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обратный звонок. Без спама.</p>
-            <div class="form-feedback" id="heroFeedback" role="status"></div>
+        <div class="card hero-card">
+          <h3>Бесплатная консультация</h3>
+          <p>Оставьте номер — перезвоним и назовём ориентир по цене</p>
+          <form id="heroForm">
+            <div class="ig"><input id="heroName" type="text" placeholder="Ваше имя *" required /></div>
+            <div class="ig"><input id="heroPhone" type="tel" placeholder="Телефон *" required /></div>
+            <div class="ig"><input id="heroCar" type="text" placeholder="Марка авто" /></div>
+            <button class="btn btn-primary" type="submit" style="width:100%">Получить звонок</button>
+            <div class="form-feedback" id="heroFeedback"></div>
           </form>
-          <div class="hfc-trust">
-            <span>★ 4.9</span>
-            <span>·</span>
-            <span>Ответ за 10 мин</span>
-            <span>·</span>
-            <span>Смета до работ</span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- TRUST GRID -->
-    <section class="trust-section" aria-label="Преимущества">
-      <div class="container">
-        <div class="trust-grid">
-          <article class="trust-item glass reveal">
-            <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg></div>
-            <strong>12 мес гарантия</strong>
-            <p>На все выполненные работы — письменно в заказ-наряде</p>
-          </article>
-          <article class="trust-item glass reveal">
-            <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2z"/></svg></div>
-            <strong>Смета до ремонта</strong>
-            <p>Цена фиксируется до начала — без скрытых доплат</p>
-          </article>
-          <article class="trust-item glass reveal">
-            <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
-            <strong>1000+ клиентов</strong>
-            <p>Реальные отзывы и повторные обращения</p>
-          </article>
-          <article class="trust-item glass reveal">
-            <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
-            <strong>Быстрый ответ</strong>
-            <p>Перезваниваем в течение 10 минут в рабочее время</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="section-compact">
+    <section class="section section-white">
       <div class="container">
-        <div class="section-head section-head-left reveal">
-          <span class="sec-label">Как мы работаем</span>
-          <h2 class="sec-title">4 шага до исправного авто</h2>
-          <p class="sec-sub">Прозрачный процесс — вы всегда знаете, что делаем и сколько это стоит.</p>
+        <div class="section-head center">
+          <span class="sec-label">Почему мы</span>
+          <h2>Надёжный сервис без сюрпризов</h2>
         </div>
-        <div class="process-grid">
-          <article class="process-step glass reveal"><span class="step-num">01</span><h3>Диагностика</h3><p>Находим причину поломки и показываем результат на экране.</p></article>
-          <article class="process-step glass reveal"><span class="step-num">02</span><h3>Смета</h3><p>Согласуем цену и сроки. Без вашего «да» — работы не начинаем.</p></article>
-          <article class="process-step glass reveal"><span class="step-num">03</span><h3>Ремонт</h3><p>Делаем по регламенту, используем проверенные запчасти.</p></article>
-          <article class="process-step glass reveal"><span class="step-num">04</span><h3>Выдача</h3><p>Проверка качества, гарантия 12 мес, рекомендации по ТО.</p></article>
+        <div class="grid-4">
+          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg></div><h3>12 мес гарантия</h3><p>На все выполненные работы</p></article>
+          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></div><h3>Смета до работ</h3><p>Цена фиксируется заранее</p></article>
+          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div><h3>1000+ клиентов</h3><p>Реальные отзывы в Гомеле</p></article>
+          <article class="card trust-card"><div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2z"/></svg></div><h3>Быстрый ответ</h3><p>Перезвон за 10 минут</p></article>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services">
+    <section class="section">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <span class="sec-label">Услуги</span>
-          <h2 class="sec-title">Что ремонтируем чаще всего</h2>
-          <p class="sec-sub">Нажмите «Записаться» — подберём время и назовём ориентир по стоимости.</p>
+          <h2>Популярные работы</h2>
+          <p>Диагностика, двигатель, подвеска, ТО — полный список на отдельной странице.</p>
         </div>
-        <div class="bento">
-          <article class="glass bento-card span-6 reveal svc-card" data-service="Компьютерная диагностика">
-            <span class="svc-badge">Хит</span>
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M4 10c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2H4zm2 2h12v8H6v-8z"/></svg></div>
-            <h3>Компьютерная диагностика</h3>
-            <p class="svc-benefit">Точно находим неисправность — не меняем лишнего</p>
-            <div class="bento-meta"><span class="price-tag">от 30 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
-          <article class="glass bento-card span-6 reveal svc-card" data-service="Ремонт двигателей">
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
-            <h3>Ремонт двигателей</h3>
-            <p class="svc-benefit">Текущий и капитальный ремонт ДВС с гарантией</p>
-            <div class="bento-meta"><span class="price-tag">от 150 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
-          <article class="glass bento-card reveal svc-card" data-service="Ремонт подвески">
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div>
-            <h3>Ремонт подвески</h3>
-            <p class="svc-benefit">Убираем стуки, вибрации, неравномерный износ</p>
-            <div class="bento-meta"><span class="price-tag">от 50 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
-          <article class="glass bento-card reveal svc-card" data-service="Тормозная система">
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-            <h3>Тормозная система</h3>
-            <p class="svc-benefit">Безопасное торможение — колодки, диски, суппорты</p>
-            <div class="bento-meta"><span class="price-tag">от 40 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
-          <article class="glass bento-card reveal svc-card" data-service="ТО и замена масла">
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
-            <h3>ТО и замена масла</h3>
-            <p class="svc-benefit">Продлеваем ресурс мотора по регламенту</p>
-            <div class="bento-meta"><span class="price-tag">от 80 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
-          <article class="glass bento-card reveal svc-card" data-service="Консультация мастера">
-            <div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
-            <h3>Консультация мастера</h3>
-            <p class="svc-benefit">План ремонта и подбор запчастей — бесплатно</p>
-            <div class="bento-meta"><span class="price-tag">бесплатно</span><button class="btn btn-primary btn-sm svc-book-btn" type="button">Записаться</button></div>
-          </article>
+        <div class="grid-3">
+          <article class="card svc-card"><h3>Диагностика</h3><p>Точный поиск неисправности</p><div class="svc-foot"><span class="price">от 30 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
+          <article class="card svc-card"><h3>Ремонт двигателя</h3><p>Текущий и капитальный ремонт ДВС</p><div class="svc-foot"><span class="price">от 150 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
+          <article class="card svc-card"><h3>Ремонт подвески</h3><p>Стойки, рычаги, сайлентблоки</p><div class="svc-foot"><span class="price">от 50 BYN</span><a class="btn btn-sm btn-primary" href="./booking.html">Запись</a></div></article>
         </div>
+        <p style="text-align:center;margin-top:28px"><a class="btn btn-outline" href="./services.html">Все услуги и цены →</a></p>
       </div>
     </section>
 
-    <!-- MID CTA -->
-    <div class="container">
-      <div class="cta-mega glass reveal">
-        <div class="cta-mega-copy">
-          <span class="cta-mega-tag">Скидка на диагностику при записи с сайта</span>
-          <strong>Не знаете, в чём проблема? Начните с диагностики</strong>
-          <p>Мастер найдёт причину и предложит оптимальный вариант ремонта — без навязывания лишнего.</p>
-        </div>
-        <div class="cta-mega-actions">
-          <button class="btn btn-primary open-modal-btn" type="button" data-service="Компьютерная диагностика">Записаться на диагностику</button>
-          <a class="btn btn-glass" href="tel:+375339116611">Позвонить</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRICING -->
-    <section id="pricing" class="section-dark">
+    <section class="section section-white">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="sec-label">Прозрачные цены</span>
-          <h2 class="sec-title">Популярные работы — от скольки</h2>
-          <p class="sec-sub">Точная стоимость после диагностики. Никаких сюрпризов в счёте.</p>
-        </div>
-        <div class="price-table glass reveal">
-          <div class="price-row price-head"><span>Услуга</span><span>от</span><span></span></div>
-          <div class="price-row"><span>Компьютерная диагностика</span><span class="price-val">30 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button" data-service="Компьютерная диагностика">Запись</button></div>
-          <div class="price-row"><span>Замена масла + фильтр</span><span class="price-val">80 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button" data-service="ТО и замена масла">Запись</button></div>
-          <div class="price-row"><span>Ремонт подвески (1 элемент)</span><span class="price-val">50 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button" data-service="Ремонт подвески">Запись</button></div>
-          <div class="price-row"><span>Тормозные колодки (ось)</span><span class="price-val">40 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button" data-service="Тормозная система">Запись</button></div>
-          <div class="price-row"><span>Ремонт двигателя</span><span class="price-val">150 BYN</span><button class="btn btn-primary btn-sm svc-book-btn" type="button" data-service="Ремонт двигателей">Запись</button></div>
-          <div class="price-row"><span>Подбор запчастей по VIN</span><span class="price-val">бесплатно</span><button class="btn btn-primary btn-sm open-modal-part-btn" type="button">Заказать</button></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTS -->
-    <section id="parts">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="sec-label">Запчасти</span>
-          <h2 class="sec-title">Запчасти с подбором по VIN</h2>
-          <p class="sec-sub">Оригинал или проверенный аналог — подберём за 15 минут и доставим под ваш ремонт.</p>
-        </div>
-        <div class="parts-grid">
-          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы</p></article>
-          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg></div><h3>Фильтры</h3><p>Масляные, воздушные, салонные</p></article>
-          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div><h3>Ходовая часть</h3><p>Стойки, рычаги, сайлентблоки</p></article>
-          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.03 7.03 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.49.42l-.38 2.65c-.62.24-1.21.56-1.7.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46a.5.5 0 0 0 .6.22l2.49-1c.49.42 1.08.74 1.7.98l.38 2.65A.5.5 0 0 0 10 22h4a.5.5 0 0 0 .49-.42l.38-2.65c.62-.24 1.21-.56 1.7-.98l2.49 1a.5.5 0 0 0 .6-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg></div><h3>Двигатель</h3><p>Ремни, помпы, прокладки, датчики</p></article>
-          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 7H9V5h6v2zm-4 4h4V9h-4v2zm6 4h-2v2h2v-2zM7 7H5v2h2V7zm0 4H5v2h2v-2zm0 4H5v2h2v-2z"/></svg></div><h3>Электрика</h3><p>АКБ, генераторы, стартеры, свечи</p></article>
-          <article class="glass part-card reveal part-highlight"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><h3>Подбор за 15 мин</h3><p>Отправьте VIN — найдём нужную деталь</p><button class="btn btn-primary btn-sm open-modal-part-btn" type="button" style="margin-top:12px;width:100%">Заказать</button></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS (moved up for social proof) -->
-    <section id="reviews" class="section-dark">
-      <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head center">
           <span class="sec-label">Отзывы</span>
-          <h2 class="sec-title">Клиенты возвращаются к нам</h2>
+          <h2>Что говорят клиенты</h2>
         </div>
-        <div class="reviews-layout">
-          <div class="proof-panel glass reveal">
-            <div class="proof-big">4.9</div>
-            <div class="proof-stars">★★★★★</div>
-            <p>на основе отзывов клиентов</p>
-            <ul class="proof-stats">
-              <li><strong>1000+</strong><span>авто отремонтировано</span></li>
-              <li><strong>87%</strong><span>приходят повторно</span></li>
-              <li><strong>12 мес</strong><span>гарантия на работы</span></li>
-            </ul>
-            <button class="btn btn-primary open-modal-btn" type="button" style="width:100%;margin-top:16px">Хочу так же — записаться</button>
-          </div>
-          <div class="rev-col reveal">
-            <div class="glass rev-shell" id="revShell">
-              <div class="rev-track" id="msRevTrack">
-                <article class="rev-slide"><div class="rev-quote">"</div><div class="rev-stars">★★★★★</div><p>Сделали двигатель аккуратно и в срок. Всё объяснили по этапам и по цене — ни копейки лишнего.</p><div class="rev-author"><div class="rev-avatar">Д</div><div><div class="rev-name">Дмитрий</div><div class="rev-meta">Ремонт ДВС · Toyota</div></div></div></article>
-                <article class="rev-slide"><div class="rev-quote">"</div><div class="rev-stars">★★★★★</div><p>По подвеске нашли то, что два других сервиса не увидели. Качество отличное, уже второй раз еду.</p><div class="rev-author"><div class="rev-avatar">А</div><div><div class="rev-name">Александр</div><div class="rev-meta">Подвеска · VW</div></div></div></article>
-                <article class="rev-slide"><div class="rev-quote">"</div><div class="rev-stars">★★★★☆</div><p>Быстрое ТО, адекватные цены, без навязывания. Смету показали до работ — как и обещали.</p><div class="rev-author"><div class="rev-avatar">С</div><div><div class="rev-name">Сергей</div><div class="rev-meta">ТО · Hyundai</div></div></div></article>
-              </div>
-            </div>
-            <div class="dots" id="msDots">
-              <button class="dot on" type="button" aria-label="Отзыв 1"></button>
-              <button class="dot" type="button" aria-label="Отзыв 2"></button>
-              <button class="dot" type="button" aria-label="Отзыв 3"></button>
-            </div>
-          </div>
+        <div class="grid-3">
+          <article class="card review-card"><div class="review-stars">★★★★★</div><p>Сделали двигатель в срок, всё объяснили по цене. Без лишних работ.</p><div class="review-author">Дмитрий</div></article>
+          <article class="card review-card"><div class="review-stars">★★★★★</div><p>Нашли проблему подвески, которую другие пропустили. Рекомендую.</p><div class="review-author">Александр</div></article>
+          <article class="card review-card"><div class="review-stars">★★★★☆</div><p>Быстрое ТО, адекватные цены. Буду обращаться ещё.</p><div class="review-author">Сергей</div></article>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section-compact">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="sec-label">Работы</span>
-          <h2 class="sec-title">Реальные кейсы из нашего сервиса</h2>
+    <section class="section">
+      <div class="container cta-band">
+        <div>
+          <h2>Нужен ремонт? Запишитесь сейчас</h2>
+          <p>Перезвоним за 10 минут, подберём время и назовём ориентир по стоимости.</p>
         </div>
-        <div class="gallery-grid">
-          <article class="gallery-card reveal">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80" alt="Капитальный ремонт двигателя" width="800" height="600" />
-            <div class="gallery-overlay"><span class="gallery-tag">ДВС</span><h3>Капитальный ремонт двигателя</h3><p>Восстановление компрессии, замена узлов</p></div>
-          </article>
-          <article class="gallery-card reveal">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=800&q=80" alt="Ремонт подвески" width="800" height="600" />
-            <div class="gallery-overlay"><span class="gallery-tag">Подвеска</span><h3>Ремонт ходовой части</h3><p>Замена элементов + развал</p></div>
-          </article>
-          <article class="gallery-card reveal">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?auto=format&fit=crop&w=800&q=80" alt="Диагностика" width="800" height="600" />
-            <div class="gallery-overlay"><span class="gallery-tag">Диагностика</span><h3>Компьютерная диагностика</h3><p>Точный план ремонта за 30 мин</p></div>
-          </article>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-white" href="./booking.html">Онлайн-запись</a>
+          <a class="btn btn-outline" href="tel:+375339116611">Позвонить</a>
         </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="sec-label">Вопросы</span>
-          <h2 class="sec-title">Частые вопросы перед записью</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item glass reveal"><summary>Сколько стоит диагностика и что входит?</summary><p>Компьютерная диагностика — от 30 BYN. Считываем ошибки, проверяем параметры, даём понятный отчёт и план ремонта.</p></details>
-          <details class="faq-item glass reveal"><summary>Можно ли узнать цену до приезда?</summary><p>Да. Позвоните или оставьте заявку — мастер назовёт ориентир по стоимости. Точная смета — после осмотра авто.</p></details>
-          <details class="faq-item glass reveal"><summary>Вы навязываете лишний ремонт?</summary><p>Нет. Согласуем каждую позицию сметы до начала работ. Делаете только то, что одобрили.</p></details>
-          <details class="faq-item glass reveal"><summary>Какая гарантия на работы?</summary><p>12 месяцев на выполненные работы. Фиксируем в заказ-наряде.</p></details>
-          <details class="faq-item glass reveal"><summary>Можно заказать запчасти без ремонта у вас?</summary><p>Да. Подберём по VIN за 15 минут — оригинал или качественный аналог на выбор.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section id="booking" class="section-dark">
-      <div class="container">
-        <div class="booking-layout">
-          <div class="booking-copy reveal">
-            <span class="sec-label">Запись</span>
-            <h2 class="sec-title" style="text-align:left;-webkit-text-fill-color:unset;background:none;color:#fff">Запишитесь за 60 секунд</h2>
-            <p class="sec-sub" style="text-align:left;margin:0 0 24px">Оставьте заявку — перезвоним, уточним проблему и подберём удобное время в сервисе.</p>
-            <ul class="booking-perks">
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Перезвон за 10 минут</li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Смета до начала работ</li>
-              <li><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>Гарантия 12 месяцев</li>
-            </ul>
-            <a class="booking-phone" href="tel:+375339116611">+375 33 911-66-11</a>
-            <p class="booking-hours">Ежедневно 09:00–20:00 · Гомель, 1-я Транзитная 20А</p>
-          </div>
-          <div class="glass form-wrap reveal">
-            <form id="mainForm">
-              <div class="form-tabs" role="tablist">
-                <button class="form-tab on" type="button" data-type="Ремонт" role="tab" aria-selected="true">Ремонт</button>
-                <button class="form-tab" type="button" data-type="Запчасти" role="tab" aria-selected="false">Запчасти</button>
-                <button class="form-tab" type="button" data-type="Консультация" role="tab" aria-selected="false">Консультация</button>
-              </div>
-              <input type="hidden" id="requestType" name="requestType" value="Ремонт" />
-              <input type="hidden" id="serviceName" name="serviceName" value="" />
-              <div class="ig"><input id="userName" type="text" placeholder="Ваше имя *" required autocomplete="name" /></div>
-              <div class="ig"><input id="userPhone" type="tel" placeholder="Телефон * (+375)" required autocomplete="tel" /></div>
-              <div class="ig"><input id="carModel" type="text" placeholder="Марка и модель" autocomplete="off" /></div>
-              <div class="ig"><textarea id="issueDesc" rows="3" placeholder="Опишите проблему или нужные запчасти"></textarea></div>
-              <button class="btn btn-primary" type="submit" style="width:100%"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>Отправить заявку — перезвоним</button>
-              <p class="form-note">Без спама. Только по вашему запросу.</p>
-              <div class="form-feedback" id="formFeedback" role="status"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS -->
-    <section id="contacts">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="sec-label">Контакты</span>
-          <h2 class="sec-title">Приезжайте или звоните</h2>
-        </div>
-        <div class="contacts-grid">
-          <div class="glass contact-box reveal">
-            <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span><span>Гомель, 1-я Транзитная ул., 20А</span></div>
-            <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span><span><a href="tel:+375339116611">+375 33 911-66-11</a></span></div>
-            <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></span><span>Ежедневно: 09:00–20:00</span></div>
-            <div class="social-row">
-              <a class="icon-btn" href="https://t.me/mservice_gomel" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M9.9 15.5 9.7 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-13.4c.3-1.2-.4-1.7-1.2-1.4L3.6 9.8c-1.1.4-1.1 1 0 1.3l4.5 1.4 10.4-6.5c.5-.3.9-.1.5.2"/></svg></a>
-              <a class="icon-btn" href="https://www.instagram.com/mservice.gomel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm9.2 4.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zM12 7.4A4.6 4.6 0 1 0 16.6 12 4.6 4.6 0 0 0 12 7.4z"/></svg></a>
-              <a class="icon-btn" href="tel:+375339116611" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
-            </div>
-            <button class="btn btn-primary open-modal-btn" type="button" style="width:100%;margin-top:16px">Записаться на ремонт</button>
-          </div>
-          <div class="map-wrap reveal">
-            <iframe src="https://yandex.by/map-widget/v1/?ll=31.006717,52.376257&pt=31.006717,52.376257,pm2dgl&z=18" loading="lazy" allowfullscreen title="Карта MService"></iframe>
-          </div>
-        </div>
-        <footer class="site-footer">
-          <span>© 2026 MService — автосервис и автозапчасти в Гомеле</span>
-          <div class="footer-links">
-            <a href="#services">Услуги</a>
-            <a href="#booking">Запись</a>
-            <a href="#contacts">Контакты</a>
-          </div>
-        </footer>
       </div>
     </section>
   </main>
 
-  <a class="call-fab" href="tel:+375339116611" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
-  <button class="top-btn" id="msTop" type="button" aria-label="Наверх"><svg viewBox="0 0 24 24"><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></button>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">M<span>Service</span></span>
+        <p>Автосервис и автозапчасти в Гомеле. Ремонт, диагностика, гарантия 12 месяцев.</p>
+      </div>
+      <div class="footer-col"><h4>Страницы</h4><a href="./services.html">Услуги</a><a href="./parts.html">Запчасти</a><a href="./about.html">О нас</a><a href="./booking.html">Запись</a></div>
+      <div class="footer-col"><h4>Контакты</h4><a href="tel:+375339116611">+375 33 911-66-11</a><a href="./contacts.html">1-я Транзитная 20А</a><a href="https://t.me/mservice_gomel" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="footer-col"><h4>Режим</h4><a href="./contacts.html">Ежедневно 09:00–20:00</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 MService — Гомель</span><a href="./contacts.html">Контакты</a></div>
+  </footer>
 
-  <nav class="mobile-bar" aria-label="Быстрые действия">
-    <button class="primary-m open-modal-btn" type="button"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg>Запись</button>
+  <nav class="mobile-bar">
+    <a href="./index.html" class="active-tab"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>Главная</a>
+    <a href="./booking.html"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/></svg>Запись</a>
     <a href="tel:+375339116611"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Звонок</a>
-    <a href="https://t.me/mservice_gomel" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M9.9 15.5 9.7 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-13.4c.3-1.2-.4-1.7-1.2-1.4L3.6 9.8c-1.1.4-1.1 1 0 1.3l4.5 1.4 10.4-6.5c.5-.3.9-.1.5.2"/></svg>Telegram</a>
   </nav>
-
-  <div class="modal" id="callbackModal" role="dialog" aria-modal="true" aria-labelledby="callbackTitle">
-    <div class="m-content glass">
-      <button class="m-close" type="button" data-close aria-label="Закрыть">&times;</button>
-      <h3 id="callbackTitle">Быстрая запись</h3>
-      <p class="modal-sub">Перезвоним за 10 минут и назовём ориентир по цене</p>
-      <form id="modalForm">
-        <input type="hidden" id="modalService" value="" />
-        <div class="ig"><input id="modalName" type="text" placeholder="Ваше имя *" required /></div>
-        <div class="ig"><input id="modalPhone" type="tel" placeholder="Телефон *" required /></div>
-        <div class="ig"><input id="modalCar" type="text" placeholder="Марка авто / нужные запчасти" /></div>
-        <button class="btn btn-primary" type="submit" style="width:100%">Получить звонок мастера</button>
-        <div class="form-feedback" id="modalFeedback" role="status"></div>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal" id="vacancyModal" role="dialog" aria-modal="true" aria-labelledby="vacancyTitle">
-    <div class="m-content glass">
-      <button class="m-close" type="button" data-close aria-label="Закрыть">&times;</button>
-      <h3 id="vacancyTitle">Отклик на вакансию мастера</h3>
-      <form id="vacancyForm">
-        <div class="ig"><input id="vacancyName" type="text" placeholder="Ваше имя *" required /></div>
-        <div class="ig"><input id="vacancyPhone" type="tel" placeholder="Телефон *" required /></div>
-        <div class="ig"><input id="vacancyExp" type="text" placeholder="Опыт работы (лет) *" required /></div>
-        <div class="ig"><textarea id="vacancyMsg" rows="4" placeholder="Кратко о себе"></textarea></div>
-        <button class="btn btn-primary" type="submit" style="width:100%">Отправить резюме</button>
-        <div class="form-feedback" id="vacancyFeedback" role="status"></div>
-      </form>
-    </div>
-  </div>
 </div>
-<script src="./main.js?v=7"></script>
+<script src="./main.js?v=8"></script>
 </body>
 </html>
