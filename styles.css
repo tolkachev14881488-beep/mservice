@@ -84,16 +84,11 @@
 #ms-root .head { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 
 #ms-root .logo { display: flex; align-items: center; gap: clamp(8px, 2vw, 14px); min-width: 0; flex-shrink: 1; }
-#ms-root .logo-mark {
-  display: flex; align-items: center; justify-content: center;
-  height: 44px; background: transparent; flex-shrink: 0;
+#ms-root .logo-text {
+  font-family: var(--font-display); font-weight: 900; font-size: 1.35rem;
+  line-height: 1; letter-spacing: -0.04em; color: var(--ink); white-space: nowrap;
 }
-#ms-root .logo-img {
-  height: 100%; width: auto; max-width: min(150px, 38vw);
-  object-fit: contain; object-position: left center;
-  mix-blend-mode: multiply;
-  filter: contrast(1.08);
-}
+#ms-root .logo-text span { color: var(--accent); }
 #ms-root .logo-tag {
   font-size: 0.65rem; color: var(--muted); font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.3;

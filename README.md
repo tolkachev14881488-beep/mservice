@@ -1,40 +1,29 @@
-# MService — лендинг автосервиса (Гомель)
+# MService — автосервис Гомель
 
-Статический сайт: `index.html` + `styles.css` + `main.js`.
+## Ваш сайт здесь
+
+**https://tolkachev14881488-beep.github.io/mservice/**
+
+> `mservice.by` сейчас ведёт на **другой** сайт (Multiservice, Минск).
+> Чтобы новый дизайн открывался на `mservice.by`, привяжите домен в GitHub → Settings → Pages → Custom domain.
+
+## Файлы
+
+- `index.html` — страница
+- `styles.css` — стили
+- `main.js` — формы и интерактив
 
 ## Локально
-
-Откройте `index.html` в браузере или:
 
 ```bash
 npx serve .
 ```
 
-## GitHub Pages
+## Домен mservice.by
 
-Репозиторий настроен на публикацию из ветки `main` / папка `/ (root)`.
-
-После push сайт будет доступен по адресу:
-
-`https://<username>.github.io/mservice/`
-
-В настройках репозитория → Pages можно привязать домен `mservice.by`.
-
-## Tilda
-
-Файл `tilda.html` — всё в одном блоке для вставки в T123.
+1. GitHub → репозиторий → **Settings** → **Pages** → Custom domain: `mservice.by`
+2. У регистратора DNS: `CNAME mservice.by` → `tolkachev14881488-beep.github.io`
 
 ## Формы
 
-- Email: FormSubmit → `a-prom01@mail.ru`
-- Telegram: только через serverless (`api/telegram.js` на Vercel/Netlify), токен не хранить в клиенте
-
-## Структура
-
-```
-index.html      — главная страница
-styles.css      — стили
-main.js         — логика
-tilda.html      — сборка для Tilda
-api/telegram.js — serverless endpoint (Vercel)
-```
+Email через FormSubmit. Telegram — через `api/telegram.js` на Vercel (опционально).
