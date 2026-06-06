@@ -5,12 +5,29 @@
   const root = $("#ms-root");
   if (!root) return;
 
-  // FormSubmit — основной канал. Telegram — только через serverless endpoint (не хранить токен в клиенте).
-  // Пример: разверните api/telegram.js на Vercel/Netlify и укажите URL ниже.
   const CONFIG = {
     EMAIL_ENDPOINT: "https://formsubmit.co/ajax/a-prom01@mail.ru",
-    TELEGRAM_ENDPOINT: "" // например: "https://your-domain.vercel.app/api/telegram"
+    TELEGRAM_ENDPOINT: ""
   };
+
+  const mobileNav = $("#mobileNav", root);
+  const burger = $("#burgerBtn", root);
+
+  function closeMobileNav() {
+    mobileNav?.classList.remove("open");
+    burger?.classList.remove("open");
+    burger?.setAttribute("aria-expanded", "false");
+    mobileNav?.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function openMobileNav() {
+    mobileNav?.classList.add("open");
+    burger?.classList.add("open");
+    burger?.setAttribute("aria-expanded", "true");
+    mobileNav?.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
   // Smooth anchors
   $$('a[href^="#"]', root).forEach((a) => {
@@ -35,35 +52,58 @@
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
   $$(".reveal", root).forEach((el) => io.observe(el));
 
-  // Stagger delays for grid children
-  $$(".bento .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
-  $$(".parts-scroll .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
-  $$(".gallery-grid .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
-  $$(".stats-grid .stat-card", root).forEach((el, i) => el.style.setProperty("--d", i));
+  // Stagger
+  const stagger = (sel) => $$(sel, root).forEach((el, i) => el.style.setProperty("--d", i));
+  stagger(".trust-grid .reveal");
+  stagger(".process-grid .reveal");
+  stagger(".bento .reveal");
+  stagger(".parts-grid .reveal");
+  stagger(".gallery-grid .reveal");
+  stagger(".faq-list .reveal");
 
-  // 3D tilt on service cards
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduceMotion) {
-    $$("[data-tilt]", root).forEach((card) => {
-      card.addEventListener("mousemove", (e) => {
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(900px) rotateX(${y * -8}deg) rotateY(${x * 8}deg) translateY(-4px)`;
-      });
-      card.addEventListener("mouseleave", () => { card.style.transform = ""; });
-    });
+  // Scroll: progress, header, top btn, sticky CTA
+  const header = $("#siteHeader", root);
+  const scrollCta = $("#scrollCta", root);
+
+  const onScroll = () => {
+    const d = document.documentElement;
+    const max = d.scrollHeight - d.clientHeight;
+    const p = max > 0 ? (d.scrollTop / max) * 100 : 0;
+    $("#msProgress", root) && ($("#msProgress", root).style.width = p + "%");
+    header?.classList.toggle("scrolled", d.scrollTop > 40);
+    $("#msTop", root)?.classList.toggle("show", d.scrollTop > 520);
+    scrollCta?.classList.toggle("show", d.scrollTop > window.innerHeight * 0.65);
+    scrollCta?.setAttribute("aria-hidden", scrollCta?.classList.contains("show") ? "false" : "true");
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  $("#msTop", root)?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+  // Hero parallax
+  const heroImg = $("#heroImg", root);
+  if (heroImg && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) heroImg.style.transform = `translateY(${y * 0.12}px) scale(1.03)`;
+    }, { passive: true });
   }
 
-  // Active nav link on scroll
+  // Burger
+  burger?.addEventListener("click", () => {
+    mobileNav?.classList.contains("open") ? closeMobileNav() : openMobileNav();
+  });
+  mobileNav?.addEventListener("click", (e) => { if (e.target === mobileNav) closeMobileNav(); });
+  $$(".mobile-nav a, .mobile-nav .btn", root).forEach((el) => el.addEventListener("click", closeMobileNav));
+
+  // Active nav
   const navLinks = $$(".nav-desktop a[href^='#']", root);
   const sectionIds = navLinks.map((a) => a.getAttribute("href")?.slice(1)).filter(Boolean);
   const sections = sectionIds.map((id) => $("#" + id, root)).filter(Boolean);
-  if (sections.length && navLinks.length) {
+  if (sections.length) {
     const navIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -72,100 +112,12 @@
           navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
         });
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
     );
     sections.forEach((s) => navIO.observe(s));
   }
 
-  // Header scroll
-  const header = $("#siteHeader", root);
-  const onScroll = () => {
-    const d = document.documentElement;
-    const max = d.scrollHeight - d.clientHeight;
-    const p = max > 0 ? (d.scrollTop / max) * 100 : 0;
-    const progress = $("#msProgress", root);
-    if (progress) progress.style.width = p + "%";
-    header?.classList.toggle("scrolled", d.scrollTop > 40);
-    const topBtn = $("#msTop", root);
-    topBtn?.classList.toggle("show", d.scrollTop > 520);
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-  $("#msTop", root)?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-
-  // Hero image subtle parallax
-  const heroImg = $("#heroImg", root);
-  if (heroImg && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    window.addEventListener(
-      "scroll",
-      () => {
-        const y = window.scrollY;
-        if (y < window.innerHeight) heroImg.style.transform = `translateY(${y * 0.15}px) scale(1.04)`;
-      },
-      { passive: true }
-    );
-  }
-
-  // Burger menu
-  const burger = $("#burgerBtn", root);
-  const mobileNav = $("#mobileNav", root);
-
-  function openMobileNav() {
-    mobileNav?.classList.add("open");
-    burger?.classList.add("open");
-    burger?.setAttribute("aria-expanded", "true");
-    mobileNav?.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeMobileNav() {
-    mobileNav?.classList.remove("open");
-    burger?.classList.remove("open");
-    burger?.setAttribute("aria-expanded", "false");
-    mobileNav?.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  burger?.addEventListener("click", () => {
-    mobileNav?.classList.contains("open") ? closeMobileNav() : openMobileNav();
-  });
-  mobileNav?.addEventListener("click", (e) => {
-    if (e.target === mobileNav) closeMobileNav();
-  });
-  $$(".mobile-nav a, .mobile-nav .btn", root).forEach((el) => {
-    el.addEventListener("click", closeMobileNav);
-  });
-
-  // Stats counters
-  let statsDone = false;
-  const about = $("#about", root);
-  if (about) {
-    const statsIO = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !statsDone) {
-            statsDone = true;
-            $$(".num", about).forEach((el) => {
-              const target = Number(el.dataset.target || 0);
-              const start = performance.now();
-              const dur = 1200;
-              const tick = (t) => {
-                const prog = Math.min((t - start) / dur, 1);
-                const val = Math.floor(target * (1 - Math.pow(1 - prog, 3)));
-                el.textContent = val + (target >= 100 ? "+" : target === 12 ? "" : "+");
-                if (prog < 1) requestAnimationFrame(tick);
-              };
-              requestAnimationFrame(tick);
-            });
-          }
-        });
-      },
-      { threshold: 0.35 }
-    );
-    statsIO.observe(about);
-  }
-
-  // Reviews slider + swipe
+  // Reviews slider
   const track = $("#msRevTrack", root);
   const shell = $("#revShell", root);
   const dots = $$("#msDots .dot", root);
@@ -182,11 +134,10 @@
 
   const startAuto = () => {
     clearInterval(timer);
-    timer = setInterval(() => show(idx + 1), 4500);
+    timer = setInterval(() => show(idx + 1), 5000);
   };
 
   dots.forEach((d, i) => d.addEventListener("click", () => { show(i); startAuto(); }));
-
   if (shell) {
     shell.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
     shell.addEventListener("touchend", (e) => {
@@ -194,24 +145,32 @@
       if (Math.abs(diff) > 50) { show(idx + (diff > 0 ? 1 : -1)); startAuto(); }
     }, { passive: true });
   }
-
   if (dots.length) { show(0); startAuto(); }
 
   // Modals
   const modals = {
     callback: $("#callbackModal", root),
-    vacancy: $("#vacancyModal", root),
-    contacts: $("#contactsModal", root)
+    vacancy: $("#vacancyModal", root)
   };
   let lastFocus = null;
 
-  const openModal = (m) => {
+  const setService = (name) => {
+    const svc = name || "";
+    const modalSvc = $("#modalService", root);
+    const mainSvc = $("#serviceName", root);
+    const issue = $("#issueDesc", root);
+    if (modalSvc) modalSvc.value = svc;
+    if (mainSvc) mainSvc.value = svc;
+    if (svc && issue && !issue.value) issue.placeholder = `Интересует: ${svc}. Опишите проблему...`;
+  };
+
+  const openModal = (m, service) => {
     if (!m) return;
+    if (service) setService(service);
     lastFocus = document.activeElement;
     m.classList.add("open");
     document.body.style.overflow = "hidden";
-    const first = $("input, button, textarea, [tabindex]", m);
-    first?.focus();
+    $("input:not([type=hidden])", m)?.focus();
   };
 
   const closeAll = () => {
@@ -220,14 +179,37 @@
     lastFocus?.focus?.();
   };
 
-  $$(".open-modal-btn", root).forEach((b) => b.addEventListener("click", () => openModal(modals.callback)));
-  $$(".open-modal-part-btn", root).forEach((b) => b.addEventListener("click", () => {
-    openModal(modals.callback);
-    const car = $("#modalCar", root);
-    if (car) car.placeholder = "Марка авто / нужные запчасти";
-  }));
+  $$(".open-modal-btn", root).forEach((b) => {
+    b.addEventListener("click", () => openModal(modals.callback, b.dataset.service || ""));
+  });
+
+  $$(".open-modal-part-btn", root).forEach((b) => {
+    b.addEventListener("click", () => {
+      openModal(modals.callback, "Запчасти");
+      const car = $("#modalCar", root);
+      if (car) car.placeholder = "Марка авто / VIN / нужные запчасти";
+      const mainForm = $("#mainForm", root);
+      if (mainForm) {
+        $$(".form-tab", root).forEach((t) => {
+          const isParts = t.dataset.type === "Запчасти";
+          t.classList.toggle("on", isParts);
+          t.setAttribute("aria-selected", isParts ? "true" : "false");
+        });
+        const rt = $("#requestType", root);
+        if (rt) rt.value = "Запчасти";
+        mainForm.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  });
+
+  $$(".svc-book-btn", root).forEach((b) => {
+    b.addEventListener("click", () => {
+      const svc = b.dataset.service || b.closest("[data-service]")?.dataset.service || "";
+      openModal(modals.callback, svc);
+    });
+  });
+
   $$(".open-vacancy-modal", root).forEach((b) => b.addEventListener("click", () => openModal(modals.vacancy)));
-  $$(".open-contacts-modal", root).forEach((b) => b.addEventListener("click", () => openModal(modals.contacts)));
   $$("[data-close]", root).forEach((b) => b.addEventListener("click", closeAll));
   Object.values(modals).forEach((m) => m?.addEventListener("click", (e) => { if (e.target === m) closeAll(); }));
   window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(); });
@@ -246,12 +228,9 @@
     });
   });
 
-  // Phone hint on focus
-  const phoneInputs = $$('input[type="tel"]', root);
-  phoneInputs.forEach((inp) => {
-    inp.addEventListener("focus", () => {
-      if (!inp.value) inp.value = "+375 ";
-    });
+  // Phone hint
+  $$('input[type="tel"]', root).forEach((inp) => {
+    inp.addEventListener("focus", () => { if (!inp.value) inp.value = "+375 "; });
   });
 
   async function sendToEmail(formData) {
@@ -287,7 +266,7 @@
     if (timeout) setTimeout(() => { el.innerHTML = ""; }, timeout);
   };
 
-  function bindForm({ form, fb, payload, closeModalId }) {
+  function bindForm({ form, fb, payload, closeModalId, onSuccess }) {
     const formEl = $(form, root);
     const fbEl = $(fb, root);
     if (!formEl || !fbEl) return;
@@ -296,67 +275,78 @@
       e.preventDefault();
       const data = payload();
       if (!data.valid) {
-        feedback(fbEl, '<span style="color:#ff9f9f">Заполните обязательные поля</span>', 3000);
+        feedback(fbEl, '<span style="color:#ff9f9f">Заполните имя и телефон</span>', 3000);
         return;
       }
 
       feedback(fbEl, '<span style="color:#8ec1ff">Отправка...</span>', 0);
-
       const emailOk = await sendToEmail(data.formData);
       if (!emailOk) {
-        feedback(fbEl, '<span style="color:#ff9f9f">Ошибка отправки. Попробуйте позже или позвоните нам.</span>');
+        feedback(fbEl, '<span style="color:#ff9f9f">Ошибка. Позвоните: +375 33 911-66-11</span>');
         return;
       }
 
-      const tgResult = await sendToTelegram(data.telegramText);
-      let msg = '<span style="color:#9fe0a5">Заявка отправлена! Мы свяжемся с вами.</span>';
-      if (CONFIG.TELEGRAM_ENDPOINT && tgResult === false) {
-        msg += '<div style="margin-top:6px;color:#f7c86a;">Email доставлен, Telegram — проверьте endpoint.</div>';
-      }
-      feedback(fbEl, msg);
-
+      await sendToTelegram(data.telegramText);
+      feedback(fbEl, '<span style="color:#3dd68c">✓ Принято! Перезвоним за 10 минут.</span>');
       formEl.reset();
-      if (requestTypeInput) requestTypeInput.value = "Ремонт";
-      $$(".form-tab", root).forEach((t, i) => {
-        t.classList.toggle("on", i === 0);
-        t.setAttribute("aria-selected", i === 0 ? "true" : "false");
-      });
+      onSuccess?.();
 
       if (closeModalId) {
         setTimeout(() => {
           $(closeModalId, root)?.classList.remove("open");
           if (!mobileNav?.classList.contains("open")) document.body.style.overflow = "";
-        }, 1200);
+        }, 1400);
       }
     });
   }
 
+  const resetMainTabs = () => {
+    if (requestTypeInput) requestTypeInput.value = "Ремонт";
+    $$(".form-tab", root).forEach((t, i) => {
+      t.classList.toggle("on", i === 0);
+      t.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    });
+    setService("");
+  };
+
+  bindForm({
+    form: "#heroForm",
+    fb: "#heroFeedback",
+    payload: () => {
+      const name = ($("#heroName", root)?.value || "").trim();
+      const phone = ($("#heroPhone", root)?.value || "").trim();
+      const car = ($("#heroCar", root)?.value || "").trim();
+      const formData = new FormData();
+      formData.append("Тип заявки", "Консультация (Hero)");
+      formData.append("Имя", name);
+      formData.append("Телефон", phone);
+      formData.append("Автомобиль", car);
+      formData.append("_subject", "Заявка с Hero — консультация");
+      const telegramText = `<b>HERO ЗАЯВКА</b>\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car || "—"}`;
+      return { valid: !!(name && phone), formData, telegramText };
+    }
+  });
+
   bindForm({
     form: "#mainForm",
     fb: "#formFeedback",
+    onSuccess: resetMainTabs,
     payload: () => {
       const name = ($("#userName", root)?.value || "").trim();
       const phone = ($("#userPhone", root)?.value || "").trim();
       const car = ($("#carModel", root)?.value || "").trim();
       const issue = ($("#issueDesc", root)?.value || "").trim();
       const type = ($("#requestType", root)?.value || "Ремонт").trim();
-
+      const service = ($("#serviceName", root)?.value || "").trim();
       const formData = new FormData();
       formData.append("Тип заявки", type);
+      formData.append("Услуга", service);
       formData.append("Имя", name);
       formData.append("Телефон", phone);
       formData.append("Автомобиль", car);
       formData.append("Проблема", issue);
-      formData.append("_subject", `Заявка: ${type}`);
-
-      const telegramText =
-        `<b>НОВАЯ ЗАЯВКА</b>\n` +
-        `Тип: ${type}\n` +
-        `Имя: ${name}\n` +
-        `Телефон: ${phone}\n` +
-        `Авто: ${car || "не указано"}\n` +
-        `Проблема: ${issue || "не указана"}`;
-
+      formData.append("_subject", `Заявка: ${type}${service ? " — " + service : ""}`);
+      const telegramText = `<b>ЗАЯВКА</b>\nТип: ${type}\nУслуга: ${service || "—"}\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car || "—"}\nПроблема: ${issue || "—"}`;
       return { valid: !!(name && phone), formData, telegramText };
     }
   });
@@ -369,19 +359,14 @@
       const name = ($("#modalName", root)?.value || "").trim();
       const phone = ($("#modalPhone", root)?.value || "").trim();
       const car = ($("#modalCar", root)?.value || "").trim();
-
+      const service = ($("#modalService", root)?.value || "").trim();
       const formData = new FormData();
       formData.append("Имя", name);
       formData.append("Телефон", phone);
       formData.append("Автомобиль / Запчасти", car);
-      formData.append("_subject", "Быстрая запись");
-
-      const telegramText =
-        `<b>БЫСТРАЯ ЗАПИСЬ</b>\n` +
-        `Имя: ${name}\n` +
-        `Телефон: ${phone}\n` +
-        `Авто/запчасти: ${car || "не указано"}`;
-
+      formData.append("Услуга", service);
+      formData.append("_subject", `Быстрая запись${service ? ": " + service : ""}`);
+      const telegramText = `<b>БЫСТРАЯ ЗАПИСЬ</b>\nУслуга: ${service || "—"}\nИмя: ${name}\nТелефон: ${phone}\nАвто: ${car || "—"}`;
       return { valid: !!(name && phone), formData, telegramText };
     }
   });
@@ -395,21 +380,13 @@
       const phone = ($("#vacancyPhone", root)?.value || "").trim();
       const exp = ($("#vacancyExp", root)?.value || "").trim();
       const msg = ($("#vacancyMsg", root)?.value || "").trim();
-
       const formData = new FormData();
       formData.append("Имя", name);
       formData.append("Телефон", phone);
       formData.append("Опыт (лет)", exp);
       formData.append("Сообщение", msg);
-      formData.append("_subject", "Отклик на вакансию мастера");
-
-      const telegramText =
-        `<b>ОТКЛИК НА ВАКАНСИЮ</b>\n` +
-        `Имя: ${name}\n` +
-        `Телефон: ${phone}\n` +
-        `Опыт: ${exp} лет\n` +
-        `О себе: ${msg || "не указано"}`;
-
+      formData.append("_subject", "Отклик на вакансию");
+      const telegramText = `<b>ВАКАНСИЯ</b>\nИмя: ${name}\nТелефон: ${phone}\nОпыт: ${exp}\nО себе: ${msg || "—"}`;
       return { valid: !!(name && phone && exp), formData, telegramText };
     }
   });
