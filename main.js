@@ -12,14 +12,13 @@
 
   const header = $(".site-header", root);
   const hasHero = !!$(".hero", root);
-
   if (header && hasHero) header.classList.add("on-hero");
 
   const onScroll = () => {
     const y = window.scrollY;
     if (header) {
       header.classList.toggle("scrolled", y > 60);
-      if (hasHero) header.classList.toggle("on-hero", y < 80);
+      if (hasHero) header.classList.toggle("on-hero", y < 100);
     }
   };
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -32,12 +31,7 @@
     burger?.classList.remove("open");
     document.body.style.overflow = "";
   };
-  const openNav = () => {
-    mobileNav?.classList.add("open");
-    burger?.classList.add("open");
-    document.body.style.overflow = "hidden";
-  };
-  burger?.addEventListener("click", () => mobileNav?.classList.contains("open") ? closeNav() : openNav());
+  burger?.addEventListener("click", () => mobileNav?.classList.contains("open") ? closeNav() : (mobileNav?.classList.add("open"), burger?.classList.add("open"), document.body.style.overflow = "hidden"));
   mobileNav?.addEventListener("click", (e) => { if (e.target === mobileNav) closeNav(); });
   $$(".mobile-nav a", root).forEach((a) => a.addEventListener("click", closeNav));
 
@@ -54,13 +48,21 @@
     inp.addEventListener("focus", () => { if (!inp.value) inp.value = "+375 "; });
   });
 
+  const reveals = $$(".reveal", root);
+  if (reveals.length && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("visible"));
+  }
+
   async function sendEmail(fd) {
     const body = new FormData();
     for (const [k, v] of fd.entries()) body.append(k, v);
     body.append("_captcha", "false");
-    try {
-      return (await fetch(CONFIG.EMAIL_ENDPOINT, { method: "POST", body })).ok;
-    } catch { return false; }
+    try { return (await fetch(CONFIG.EMAIL_ENDPOINT, { method: "POST", body })).ok; } catch { return false; }
   }
 
   const fb = (el, html, t = 5000) => {
