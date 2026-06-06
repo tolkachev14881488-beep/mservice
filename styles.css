@@ -111,47 +111,75 @@ html, body { margin: 0; }
 #ms-root .mobile-nav a.active { background: rgba(255,87,34,0.1); color: var(--orange); }
 #ms-root .mobile-nav .btn { width: 100%; margin-top: 12px; }
 
-/* HERO with background image */
+/* HERO */
 #ms-root .hero {
   position: relative; min-height: max(520px, 88svh);
   display: flex; align-items: center;
   background-size: cover; background-position: center; background-repeat: no-repeat;
+  overflow: hidden;
 }
 #ms-root .hero::before {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(13,17,23,0.5) 0%, rgba(13,17,23,0.2) 45%, rgba(13,17,23,0.75) 100%);
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(13,17,23,0.55) 0%, rgba(13,17,23,0.35) 50%, rgba(13,17,23,0.7) 100%);
 }
 #ms-root .hero::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(13,17,23,0.82) 0%, rgba(13,17,23,0.35) 48%, transparent 72%);
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(13,17,23,0.75) 0%, transparent 60%);
 }
-/* Home hero — BMW X5 справа, текст в колонке по центру контейнера */
+
+/* Home hero — BMW X5 + читаемая панель */
 #ms-root .hero-home {
-  background-position: 72% center;
-  min-height: max(560px, 92svh);
+  min-height: max(600px, 94svh);
+  align-items: center; padding: calc(var(--hdr) + 24px) 0 clamp(48px, 8vw, 72px);
 }
-#ms-root .hero-home::after {
-  background: linear-gradient(90deg, rgba(13,17,23,0.88) 0%, rgba(13,17,23,0.5) 38%, rgba(13,17,23,0.12) 58%, transparent 78%);
+#ms-root .hero-home::before,
+#ms-root .hero-home::after { display: none; }
+#ms-root .hero-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 68% center;
+}
+#ms-root .hero-shade {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(8,10,16,0.94) 0%, rgba(8,10,16,0.72) 42%, rgba(8,10,16,0.25) 68%, rgba(8,10,16,0.45) 100%),
+    linear-gradient(180deg, rgba(8,10,16,0.5) 0%, transparent 35%, rgba(8,10,16,0.55) 100%);
 }
 #ms-root .hero-home .wrap {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: minmax(0, 560px) 1fr;
-  align-items: center; gap: 32px;
-  min-height: max(480px, calc(92svh - var(--hdr)));
-  padding-top: calc(var(--hdr) + 24px);
-  padding-bottom: clamp(48px, 8vw, 72px);
+  display: flex; align-items: center;
+  min-height: calc(94svh - var(--hdr) - 72px);
 }
-#ms-root .hero-inner { position: relative; z-index: 2; width: 100%; }
-#ms-root .hero-home .hero-inner { grid-column: 1; max-width: 560px; }
-#ms-root .hero h1 { font-size: clamp(2rem, 6.5vw, 3.8rem); color: #fff; margin-bottom: 16px; max-width: 100%; }
-#ms-root .hero h1 em { font-style: normal; color: var(--orange); }
-#ms-root .hero-lead { color: rgba(255,255,255,0.88); font-size: clamp(0.95rem, 2.2vw, 1.12rem); max-width: 540px; margin-bottom: 28px; line-height: 1.65; }
-#ms-root .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+#ms-root .hero-panel {
+  width: 100%; max-width: 560px;
+  padding: clamp(28px, 5vw, 40px);
+  background: rgba(10, 12, 18, 0.82);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+}
+#ms-root .hero-inner { width: 100%; }
+#ms-root .hero h1 {
+  font-size: clamp(1.75rem, 5.5vw, 3.2rem); color: #fff; margin-bottom: 14px;
+  line-height: 1.1; text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+#ms-root .hero h1 em { font-style: normal; color: #ff8a50; }
+#ms-root .hero-lead {
+  color: rgba(255,255,255,0.92); font-size: clamp(0.92rem, 2vw, 1.05rem);
+  margin-bottom: 24px; line-height: 1.7; font-weight: 500;
+}
+#ms-root .hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
 #ms-root .hero-badge {
-  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; margin-bottom: 18px;
-  background: rgba(255,87,34,0.9); color: #fff; border-radius: 999px;
-  font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em;
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; margin-bottom: 16px;
+  background: var(--orange); color: #fff; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
 }
+#ms-root .hero-mini {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+#ms-root .hero-mini span { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.85); }
+#ms-root .hero-mini strong { color: #ff8a50; }
 #ms-root .hero-sm { min-height: max(340px, 50svh); align-items: center; padding-bottom: 0; }
 #ms-root .hero-sm .hero-inner { padding-top: calc(var(--hdr) + 48px); padding-bottom: 48px; }
 #ms-root .hero-sm h1 { font-size: clamp(1.7rem, 5vw, 2.6rem); }
@@ -366,16 +394,17 @@ html, body { margin: 0; }
 
 @media (max-width: 640px) {
   #ms-root { --wrap: calc(100% - 24px); }
-  #ms-root .hero { min-height: max(480px, 92svh); align-items: flex-end; }
-  #ms-root .hero-home { background-position: 60% center; align-items: flex-end; }
-  #ms-root .hero-home .wrap {
-    grid-template-columns: 1fr; min-height: auto;
-    padding-top: calc(var(--hdr) + 16px); padding-bottom: 40px;
+  #ms-root .hero { min-height: max(480px, 92svh); }
+  #ms-root .hero-home { min-height: auto; padding-bottom: 32px; }
+  #ms-root .hero-photo { object-position: center 40%; }
+  #ms-root .hero-shade {
+    background: linear-gradient(180deg, rgba(8,10,16,0.55) 0%, rgba(8,10,16,0.88) 100%);
   }
-  #ms-root .hero-home .hero-inner { max-width: 100%; text-align: center; margin-inline: auto; }
-  #ms-root .hero-home .hero-btns { justify-content: center; }
-  #ms-root .hero::after { background: linear-gradient(180deg, rgba(13,17,23,0.45) 0%, rgba(13,17,23,0.88) 100%); }
-  #ms-root .hero-home::after { background: linear-gradient(180deg, rgba(13,17,23,0.4) 0%, rgba(13,17,23,0.9) 100%); }
+  #ms-root .hero-home .wrap { min-height: auto; align-items: flex-end; }
+  #ms-root .hero-panel { max-width: 100%; border-radius: 16px; }
+  #ms-root .hero-btns { flex-direction: column; }
+  #ms-root .hero-btns .btn { width: 100%; }
+  #ms-root .hero-mini { justify-content: center; text-align: center; }
   #ms-root .hero-btns { flex-direction: column; width: 100%; }
   #ms-root .hero-btns .btn { width: 100%; }
   #ms-root .hero-float { margin-top: -32px; }
