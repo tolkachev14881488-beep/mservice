@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="./images/bmw-lift.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=16" />
+  <link rel="stylesheet" href="./styles.css?v=17" />
 
   <script type="application/ld+json">
   {
@@ -44,13 +44,8 @@
   </script>
 </head>
 <body data-page="home">
-<div id="ms-root" class="has-conv-bar">
+<div id="ms-root">
   <div class="progress" id="msProgress"></div>
-
-  <div class="conv-bar">
-    <span>⚡ <strong>Перезвоним за 10 минут</strong> — свободные окна сегодня</span>
-    <button type="button" class="btn btn-sm open-modal-btn" style="padding:5px 14px;min-height:32px;font-size:0.78rem">Записаться</button>
-  </div>
 
   <header class="site-header">
     <div class="wrap head">
@@ -91,46 +86,24 @@
   </div>
 
   <main>
-    <section class="hero" id="home">
-      <div class="wrap hero-wrap">
-        <div class="reveal">
-          <div class="badges">
-            <span class="badge badge-hot">Свободные окна сегодня</span>
-            <span class="badge">4+ года опыта</span>
-            <span class="badge">Гарантия 12 мес</span>
-            <span class="badge">Запчасти в наличии</span>
-          </div>
-          <h1>MSERVICE <span class="ac">AUTO</span><br>Профессиональный автосервис в Гомеле</h1>
-          <p class="hero-lead">Диагностика, ремонт двигателей и подвески, обслуживание и подбор автозапчастей. Прозрачная смета до начала работ — без скрытых доплат.</p>
-          <div class="hero-actions">
-            <button type="button" class="btn btn-primary btn-lg open-modal-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-2 12H7v-2h10v2zm0-4H7v-2h10v2z"/></svg>
-              Записаться на ремонт
-            </button>
-            <a class="btn btn-ghost btn-lg" href="tel:+375339116611">
-              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-              Позвонить
-            </a>
-          </div>
-          <p class="hero-note">
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
-            Оставьте заявку — перезвоним за 10 минут, консультация бесплатно
-          </p>
+    <section class="hero-split" id="home">
+      <div class="hero-split-left reveal">
+        <p class="hero-eyebrow">Автосервис · Гомель · 09:00–20:00</p>
+        <h1>Ремонт авто,<br>которому <span class="ac">доверяют</span></h1>
+        <p class="hero-lead">Диагностика, двигатель, подвеска и запчасти по VIN. Согласуем смету до начала — без скрытых доплат и лишних работ.</p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary btn-lg open-modal-btn">Записаться на ремонт</button>
+          <a class="btn btn-ghost btn-lg" href="tel:+375339116611">+375 33 911-66-11</a>
         </div>
-
-        <aside class="card hero-box reveal">
-          <h3>
-            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.7 19.3 14.4 11l4.7-4.7a1 1 0 0 0-.3-1.6l-2.8-1.2a1 1 0 0 0-1.2.3l-4.7 4.7-2.1-2.1a1 1 0 0 0-1.4 0l-1.4 1.4a1 1 0 0 0 0 1.4l2.1 2.1-4.7 4.7a1 1 0 0 0-.3 1.2l1.2 2.8a1 1 0 0 0 1.6.3l4.7-4.7 8.3 8.3a1 1 0 0 0 1.4 0l1.4-1.4a1 1 0 0 0 0-1.4z"/></svg>
-            Почему выбирают нас
-          </h3>
-          <div class="hero-list">
-            <div class="hero-item"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Профильный ремонт двигателей, подвески и электрики</span></div>
-            <div class="hero-item"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Подбор запчастей по VIN: оригинал и качественные аналоги</span></div>
-            <div class="hero-item"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Согласование стоимости до начала работ</span></div>
-            <div class="hero-item"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span>Гарантия на работы до 12 месяцев</span></div>
-          </div>
-          <button type="button" class="btn btn-primary hero-box-cta open-modal-btn">Быстрая запись — 2 поля</button>
-        </aside>
+        <ul class="hero-points">
+          <li>Смета до начала работ</li>
+          <li>Гарантия 12 месяцев</li>
+          <li>Запчасти по VIN за 15 мин</li>
+          <li>Перезвон за 10 минут</li>
+        </ul>
+      </div>
+      <div class="hero-split-right">
+        <img src="./images/bmw-lift.jpg" alt="BMW на подъёмнике в MService" width="1200" height="1600" fetchpriority="high" />
       </div>
     </section>
 
@@ -147,59 +120,44 @@
         <h2 class="sec-title reveal">Наши услуги</h2>
         <p class="sec-sub reveal">От регламентного обслуживания до сложного ремонта. Цены «от» — точная стоимость после диагностики.</p>
         <div class="grid3">
-          <article class="card service reveal">
-            <div class="service-icon">🔧</div>
-            <span class="price-tag">от 30 BYN</span>
-            <h3>Компьютерная диагностика</h3>
-            <p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="Диагностика">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/diagnostic.jpg" alt="Диагностика" loading="lazy" />
+            <div class="service-body"><span class="price-tag">от 30 BYN</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p></div>
           </article>
-          <article class="card service reveal">
-            <div class="service-icon">⚙️</div>
-            <span class="price-tag">от 150 BYN</span>
-            <h3>Ремонт двигателей</h3>
-            <p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="Ремонт ДВС">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/engine.jpg" alt="Двигатель" loading="lazy" />
+            <div class="service-body"><span class="price-tag">от 150 BYN</span><h3>Ремонт двигателей</h3><p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p></div>
           </article>
-          <article class="card service reveal">
-            <div class="service-icon">🚗</div>
-            <span class="price-tag">от 50 BYN</span>
-            <h3>Ремонт подвески</h3>
-            <p>Амортизаторы, рычаги, сайлентблоки, шаровые, развал-схождение.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="Подвеска">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/garage.jpg" alt="Подвеска" loading="lazy" />
+            <div class="service-body"><span class="price-tag">от 50 BYN</span><h3>Ремонт подвески</h3><p>Амортизаторы, рычаги, сайлентблоки, шаровые, развал-схождение.</p></div>
           </article>
-          <article class="card service reveal">
-            <div class="service-icon">🛑</div>
-            <span class="price-tag">от 40 BYN</span>
-            <h3>Тормозная система</h3>
-            <p>Диагностика и обслуживание колодок, дисков, суппортов.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="Тормоза">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/tools.jpg" alt="Тормоза" loading="lazy" />
+            <div class="service-body"><span class="price-tag">от 40 BYN</span><h3>Тормозная система</h3><p>Диагностика и обслуживание колодок, дисков, суппортов.</p></div>
           </article>
-          <article class="card service reveal">
-            <div class="service-icon">🛢️</div>
-            <span class="price-tag">от 80 BYN</span>
-            <h3>ТО и замена масла</h3>
-            <p>Регламентное обслуживание и проверка ключевых узлов.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="ТО">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/parts.jpg" alt="ТО" loading="lazy" />
+            <div class="service-body"><span class="price-tag">от 80 BYN</span><h3>ТО и замена масла</h3><p>Регламентное обслуживание и проверка ключевых узлов.</p></div>
           </article>
-          <article class="card service reveal">
-            <div class="service-icon">💬</div>
-            <span class="price-tag">бесплатно</span>
-            <h3>Консультация мастера</h3>
-            <p>Оптимальный план ремонта и подбор комплектующих.</p>
-            <button type="button" class="btn btn-sm btn-primary open-modal-btn" data-prefill="Консультация">Записаться</button>
+          <article class="card service-card reveal">
+            <img src="./images/facade.jpg" alt="Консультация" loading="lazy" />
+            <div class="service-body"><span class="price-tag">бесплатно</span><h3>Консультация мастера</h3><p>Оптимальный план ремонта и подбор комплектующих.</p></div>
           </article>
         </div>
 
-        <div class="reveal" style="max-width:760px;margin:36px auto 0">
-          <div class="price-tbl">
-            <div class="row head"><span>Услуга</span><span class="val">Цена от</span><span></span></div>
-            <div class="row"><span>Диагностика</span><span class="val">30 BYN</span><button type="button" class="btn btn-sm btn-primary open-modal-btn">Запись</button></div>
-            <div class="row"><span>Замена масла</span><span class="val">80 BYN</span><button type="button" class="btn btn-sm btn-primary open-modal-btn">Запись</button></div>
-            <div class="row"><span>Подвеска (1 узел)</span><span class="val">50 BYN</span><button type="button" class="btn btn-sm btn-primary open-modal-btn">Запись</button></div>
-            <div class="row"><span>Тормоза (ось)</span><span class="val">40 BYN</span><button type="button" class="btn btn-sm btn-primary open-modal-btn">Запись</button></div>
-            <div class="row"><span>Ремонт двигателя</span><span class="val">150 BYN</span><button type="button" class="btn btn-sm btn-primary open-modal-btn">Запись</button></div>
+        <div class="reveal" style="max-width:640px;margin:32px auto 0">
+          <div class="price-tbl price-tbl-clean">
+            <div class="row head"><span>Услуга</span><span class="val">от</span></div>
+            <div class="row"><span>Диагностика</span><span class="val">30 BYN</span></div>
+            <div class="row"><span>Замена масла</span><span class="val">80 BYN</span></div>
+            <div class="row"><span>Подвеска (1 узел)</span><span class="val">50 BYN</span></div>
+            <div class="row"><span>Тормоза (ось)</span><span class="val">40 BYN</span></div>
+            <div class="row"><span>Ремонт двигателя</span><span class="val">150 BYN</span></div>
           </div>
+        </div>
+        <div class="sec-cta reveal">
+          <a class="btn btn-primary btn-lg" href="#booking">Записаться на услугу</a>
         </div>
       </div>
     </section>
@@ -209,12 +167,12 @@
         <h2 class="sec-title reveal">Продажа автозапчастей</h2>
         <p class="sec-sub reveal">Оригинальные и проверенные аналоговые запчасти. Подбор по VIN за 15 минут — установим в сервисе.</p>
         <div class="grid3">
-          <article class="card part reveal"><div class="service-icon">🛢️</div><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы и тормозные жидкости.</p></article>
-          <article class="card part reveal"><div class="service-icon">🔩</div><h3>Фильтры</h3><p>Масляные, воздушные, топливные и салонные фильтры.</p></article>
-          <article class="card part reveal"><div class="service-icon">🔧</div><h3>Ходовая часть</h3><p>Рычаги, стойки, амортизаторы, опоры и сайлентблоки.</p></article>
-          <article class="card part reveal"><div class="service-icon">⚙️</div><h3>Двигатель</h3><p>Ремни, ролики, прокладки, цепи, помпы, датчики.</p></article>
-          <article class="card part reveal"><div class="service-icon">🔋</div><h3>Электрика</h3><p>АКБ, генераторы, стартеры, катушки, свечи, сенсоры.</p></article>
-          <article class="card part reveal"><div class="service-icon">⚡</div><h3>Быстрый заказ</h3><p>Поставка редких позиций под конкретную задачу ремонта.</p></article>
+          <article class="card part reveal"><span class="part-num">01</span><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы и тормозные жидкости.</p></article>
+          <article class="card part reveal"><span class="part-num">02</span><h3>Фильтры</h3><p>Масляные, воздушные, топливные и салонные фильтры.</p></article>
+          <article class="card part reveal"><span class="part-num">03</span><h3>Ходовая часть</h3><p>Рычаги, стойки, амортизаторы, опоры и сайлентблоки.</p></article>
+          <article class="card part reveal"><span class="part-num">04</span><h3>Двигатель</h3><p>Ремни, ролики, прокладки, цепи, помпы, датчики.</p></article>
+          <article class="card part reveal"><span class="part-num">05</span><h3>Электрика</h3><p>АКБ, генераторы, стартеры, катушки, свечи, сенсоры.</p></article>
+          <article class="card part reveal"><span class="part-num">06</span><h3>Быстрый заказ</h3><p>Поставка редких позиций под конкретную задачу ремонта.</p></article>
         </div>
         <div class="sec-cta reveal">
           <button type="button" class="btn btn-primary btn-lg open-modal-part-btn">Заказать запчасти по VIN</button>
@@ -238,8 +196,8 @@
               <div class="card stat"><div class="num" data-target="12">0</div><div class="lbl">мес. гарантия</div></div>
             </div>
             <div class="grid-auto" style="margin-top:10px">
-              <article class="card feature"><div class="service-icon">🛡️</div><h3>Контроль качества</h3><p>Проверка перед выдачей машины клиенту.</p></article>
-              <article class="card feature"><div class="service-icon">📋</div><h3>Чёткий отчёт</h3><p>Понятная смета и рекомендации по обслуживанию.</p></article>
+              <article class="card feature"><h3>Контроль качества</h3><p>Проверка перед выдачей машины клиенту.</p></article>
+              <article class="card feature"><h3>Чёткий отчёт</h3><p>Понятная смета и рекомендации по обслуживанию.</p></article>
             </div>
           </div>
         </div>
@@ -457,6 +415,6 @@
     </div>
   </div>
 </div>
-<script src="./main.js?v=16"></script>
+<script src="./main.js?v=17"></script>
 </body>
 </html>
