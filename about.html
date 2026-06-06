@@ -4,22 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>О нас — MService</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=13" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=14" />
 </head>
 <body data-page="about">
 <div id="ms-root">
   <header class="site-header on-hero">
     <div class="wrap head">
       <a href="./index.html" class="logo"><span class="logo-text">M<span>Service</span></span><span class="logo-tag">Гомель</span></a>
-      <nav class="nav">
-        <a href="./index.html" data-nav="home">Главная</a>
-        <a href="./services.html" data-nav="services">Услуги</a>
-        <a href="./parts.html" data-nav="parts">Запчасти</a>
-        <a href="./about.html" data-nav="about">О нас</a>
-        <a href="./booking.html" data-nav="booking">Запись</a>
-        <a href="./contacts.html" data-nav="contacts">Контакты</a>
-      </nav>
+      <div class="nav-wrap"><nav class="nav-pill">
+        <a href="./index.html" data-nav="home">Главная</a><a href="./services.html" data-nav="services">Услуги</a>
+        <a href="./parts.html" data-nav="parts">Запчасти</a><a href="./about.html" data-nav="about">О нас</a>
+        <a href="./booking.html" data-nav="booking">Запись</a><a href="./contacts.html" data-nav="contacts">Контакты</a>
+      </nav></div>
       <div class="head-right">
         <a class="head-phone" href="tel:+375339116611">+375 33 911-66-11</a>
         <button class="burger" id="burgerBtn" type="button" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -33,24 +30,22 @@
   </div></div>
 
   <main>
-    <section class="hero hero-page">
-      <img class="hero-bg" src="./images/facade.jpg" alt="" loading="eager" />
-      <div class="hero-overlay" aria-hidden="true"></div>
+    <section class="hero-page">
+      <img class="hero-bg" src="./images/facade.jpg" alt="" />
+      <div class="hero-overlay"></div>
       <div class="wrap">
-        <div class="hero-content">
-          <p class="breadcrumb"><a href="./index.html">Главная</a> / О нас</p>
-          <h1>MService — <em>ваш сервис</em> в Гомеле</h1>
-          <p class="hero-sub">4+ года, 1000+ клиентов, гарантия 12 месяцев на все работы.</p>
-        </div>
+        <p class="breadcrumb"><a href="./index.html">Главная</a> / О нас</p>
+        <h1>MService — <em>ваш сервис</em></h1>
+        <p class="hero-sub">4+ года, 1000+ клиентов, гарантия 12 месяцев.</p>
       </div>
     </section>
 
-    <section class="sec sec-white">
+    <section class="sec sec-paper">
       <div class="wrap split">
-        <div class="split-img reveal" style="background-image:url('https://images.unsplash.com/photo-1619642751034-765df43c7869?w=1000&q=80')"></div>
+        <div class="split-img reveal" style="background-image:url('https://images.unsplash.com/photo-1619642751034-765df43c7869?w=1000&q=85')"></div>
         <div class="split-text reveal">
           <span class="sec-tag">О компании</span>
-          <h2>Честный ремонт без лишнего</h2>
+          <h2>Честный ремонт</h2>
           <p>Каждый автомобиль проходит диагностику, согласование сметы и финальную проверку перед выдачей.</p>
           <p>Мы не навязываем работы — делаем только то, что нужно вашему авто.</p>
           <a class="btn btn-primary" href="./booking.html">Записаться</a>
@@ -58,7 +53,7 @@
       </div>
     </section>
 
-    <section class="sec sec-soft">
+    <section class="sec sec-cream">
       <div class="wrap grid-4">
         <div class="stat-pill reveal"><b>4+</b><span>года</span></div>
         <div class="stat-pill reveal"><b>1000+</b><span>клиентов</span></div>
@@ -67,31 +62,22 @@
       </div>
     </section>
 
-    <section class="sec sec-white">
+    <section class="sec sec-paper">
       <div class="wrap">
         <div class="sec-head center reveal"><span class="sec-tag">Работы</span><h2>Фото из сервиса</h2></div>
         <div class="gallery reveal">
-          <div class="gallery-main"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900&q=80" alt="Ремонт двигателя" loading="lazy" /></div>
+          <div class="gallery-main"><img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900&q=85" alt="ДВС" loading="lazy" /></div>
           <div class="gallery-side">
             <img src="./images/bmw-lift.jpg" alt="Подвеска" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?w=600&q=80" alt="Диагностика" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1581094794329-cd5aa2aee6a8?w=600&q=85" alt="Диагностика" loading="lazy" />
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="sec sec-soft">
-      <div class="wrap" style="max-width:720px;margin-inline:auto">
-        <div class="sec-head center reveal"><h2>Частые вопросы</h2></div>
-        <details class="reveal"><summary>Нужна ли предварительная запись?</summary><p>Желательно, но принимаем и без записи при наличии свободного бокса. Звоните — подскажем ближайшее время.</p></details>
-        <details class="reveal"><summary>Даёте ли гарантию?</summary><p>Да, 12 месяцев на все выполненные работы.</p></details>
-        <details class="reveal"><summary>Можно ли привезти свои запчасти?</summary><p>Да, но гарантия распространяется только на работу. Рекомендуем подбор у нас — проверенные поставщики.</p></details>
       </div>
     </section>
   </main>
 
   <footer class="footer"><div class="wrap footer-bot"><span>© 2026 MService</span></div></footer>
 </div>
-<script src="./main.js?v=13"></script>
+<script src="./main.js?v=14"></script>
 </body>
 </html>

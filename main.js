@@ -11,14 +11,15 @@
   if ($(".mob-bar", root)) document.body.classList.add("has-mob-bar");
 
   const header = $(".site-header", root);
-  const hasHero = !!$(".hero", root);
-  if (header && hasHero) header.classList.add("on-hero");
+  const hasSplit = !!$(".hero-split", root);
+  const hasDarkHero = !!$(".hero-page", root);
+  if (header && hasDarkHero) header.classList.add("on-hero");
 
   const onScroll = () => {
     const y = window.scrollY;
     if (header) {
-      header.classList.toggle("scrolled", y > 60);
-      if (hasHero) header.classList.toggle("on-hero", y < 100);
+      header.classList.toggle("scrolled", y > 40);
+      if (hasDarkHero) header.classList.toggle("on-hero", y < 120);
     }
   };
   window.addEventListener("scroll", onScroll, { passive: true });
