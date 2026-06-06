@@ -19,9 +19,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="./images/bmw-lift.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=17" />
+  <link rel="stylesheet" href="./styles.css?v=18" />
 
   <script type="application/ld+json">
   {
@@ -86,34 +85,46 @@
   </div>
 
   <main>
-    <section class="hero-split" id="home">
-      <div class="hero-split-left reveal">
-        <p class="hero-eyebrow">Автосервис · Гомель · 09:00–20:00</p>
-        <h1>Ремонт авто,<br>которому <span class="ac">доверяют</span></h1>
-        <p class="hero-lead">Диагностика, двигатель, подвеска и запчасти по VIN. Согласуем смету до начала — без скрытых доплат и лишних работ.</p>
-        <div class="hero-actions">
-          <button type="button" class="btn btn-primary btn-lg open-modal-btn">Записаться на ремонт</button>
-          <a class="btn btn-ghost btn-lg" href="tel:+375339116611">+375 33 911-66-11</a>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-main reveal">
+          <p class="hero-eyebrow">Автосервис · Гомель · 09:00–20:00</p>
+          <h1>Ремонт авто,<br>которому <span class="ac">доверяют</span></h1>
+          <p class="hero-lead">Диагностика, двигатель, подвеска и запчасти по VIN. Согласуем смету до начала — без скрытых доплат и лишних работ.</p>
+          <ul class="hero-points">
+            <li>Смета до начала работ</li>
+            <li>Гарантия 12 месяцев</li>
+            <li>Запчасти по VIN за 15 мин</li>
+            <li>Перезвон за 10 минут</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#booking">Записаться на ремонт</a>
+            <a class="btn btn-ghost btn-lg" href="tel:+375339116611">+375 33 911-66-11</a>
+          </div>
         </div>
-        <ul class="hero-points">
-          <li>Смета до начала работ</li>
-          <li>Гарантия 12 месяцев</li>
-          <li>Запчасти по VIN за 15 мин</li>
-          <li>Перезвон за 10 минут</li>
-        </ul>
+        <aside class="card hero-form reveal">
+          <span class="hero-form-tag">Бесплатная консультация</span>
+          <h2 class="hero-form-title">Перезвоним за 10 минут</h2>
+          <p class="hero-form-sub">Оставьте номер — подберём время и проконсультируем</p>
+          <form id="heroForm">
+            <div class="fld"><input id="heroName" type="text" placeholder="Ваше имя *" required /></div>
+            <div class="fld"><input id="heroPhone" type="tel" placeholder="Телефон *" required /></div>
+            <div class="fld"><input id="heroCar" type="text" placeholder="Марка авто" /></div>
+            <button class="btn btn-primary btn-lg" type="submit" style="width:100%">Получить звонок</button>
+            <div class="form-msg" id="heroFeedback"></div>
+          </form>
+        </aside>
       </div>
-      <div class="hero-split-right">
-        <img src="./images/bmw-lift.jpg" alt="BMW на подъёмнике в MService" width="1200" height="1600" fetchpriority="high" />
+      <div class="trust-bar">
+        <div class="wrap trust-strip reveal">
+          <div class="trust-item"><b>4+</b><span>года работы</span></div>
+          <div class="trust-item"><b>1000+</b><span>клиентов</span></div>
+          <div class="trust-item"><b>12</b><span>мес гарантия</span></div>
+          <div class="trust-item"><b>10 мин</b><span>перезвон</span></div>
+          <div class="trust-item"><b>09–20</b><span>ежедневно</span></div>
+        </div>
       </div>
     </section>
-
-    <div class="wrap trust-strip reveal">
-      <div class="trust-item"><b>4+</b><span>года работы</span></div>
-      <div class="trust-item"><b>1000+</b><span>клиентов</span></div>
-      <div class="trust-item"><b>12</b><span>мес гарантия</span></div>
-      <div class="trust-item"><b>10 мин</b><span>перезвон</span></div>
-      <div class="trust-item"><b>09–20</b><span>ежедневно</span></div>
-    </div>
 
     <section id="services">
       <div class="wrap">
@@ -122,27 +133,27 @@
         <div class="grid3">
           <article class="card service-card reveal">
             <img src="./images/diagnostic.jpg" alt="Диагностика" loading="lazy" />
-            <div class="service-body"><span class="price-tag">от 30 BYN</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p></div>
+            <div class="service-body"><span class="price-tag">от 30 BYN</span><h3>Компьютерная диагностика</h3><p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
           <article class="card service-card reveal">
             <img src="./images/engine.jpg" alt="Двигатель" loading="lazy" />
-            <div class="service-body"><span class="price-tag">от 150 BYN</span><h3>Ремонт двигателей</h3><p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p></div>
+            <div class="service-body"><span class="price-tag">от 150 BYN</span><h3>Ремонт двигателей</h3><p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
           <article class="card service-card reveal">
             <img src="./images/garage.jpg" alt="Подвеска" loading="lazy" />
-            <div class="service-body"><span class="price-tag">от 50 BYN</span><h3>Ремонт подвески</h3><p>Амортизаторы, рычаги, сайлентблоки, шаровые, развал-схождение.</p></div>
+            <div class="service-body"><span class="price-tag">от 50 BYN</span><h3>Ремонт подвески</h3><p>Амортизаторы, рычаги, сайлентблоки, шаровые, развал-схождение.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
           <article class="card service-card reveal">
             <img src="./images/tools.jpg" alt="Тормоза" loading="lazy" />
-            <div class="service-body"><span class="price-tag">от 40 BYN</span><h3>Тормозная система</h3><p>Диагностика и обслуживание колодок, дисков, суппортов.</p></div>
+            <div class="service-body"><span class="price-tag">от 40 BYN</span><h3>Тормозная система</h3><p>Диагностика и обслуживание колодок, дисков, суппортов.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
           <article class="card service-card reveal">
             <img src="./images/parts.jpg" alt="ТО" loading="lazy" />
-            <div class="service-body"><span class="price-tag">от 80 BYN</span><h3>ТО и замена масла</h3><p>Регламентное обслуживание и проверка ключевых узлов.</p></div>
+            <div class="service-body"><span class="price-tag">от 80 BYN</span><h3>ТО и замена масла</h3><p>Регламентное обслуживание и проверка ключевых узлов.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
           <article class="card service-card reveal">
             <img src="./images/facade.jpg" alt="Консультация" loading="lazy" />
-            <div class="service-body"><span class="price-tag">бесплатно</span><h3>Консультация мастера</h3><p>Оптимальный план ремонта и подбор комплектующих.</p></div>
+            <div class="service-body"><span class="price-tag">бесплатно</span><h3>Консультация мастера</h3><p>Оптимальный план ремонта и подбор комплектующих.</p><a class="service-link" href="#booking">Записаться →</a></div>
           </article>
         </div>
 
@@ -158,6 +169,19 @@
         </div>
         <div class="sec-cta reveal">
           <a class="btn btn-primary btn-lg" href="#booking">Записаться на услугу</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap cta-band-inner reveal">
+        <div>
+          <h2>Не откладывайте ремонт</h2>
+          <p>Диагностика от 30 BYN · перезвон за 10 минут · гарантия 12 месяцев</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary btn-lg" href="#booking">Оставить заявку</a>
+          <a class="btn btn-ghost" href="tel:+375339116611">Позвонить</a>
         </div>
       </div>
     </section>
@@ -415,6 +439,6 @@
     </div>
   </div>
 </div>
-<script src="./main.js?v=17"></script>
+<script src="./main.js?v=18"></script>
 </body>
 </html>

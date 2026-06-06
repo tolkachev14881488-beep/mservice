@@ -217,6 +217,18 @@
     });
   }
 
+  bindForm("#heroForm", "#heroFeedback", () => {
+    const name = ($("#heroName", root)?.value || "").trim();
+    const phone = ($("#heroPhone", root)?.value || "").trim();
+    const car = ($("#heroCar", root)?.value || "").trim();
+    const fd = new FormData();
+    fd.append("Имя", name);
+    fd.append("Телефон", phone);
+    fd.append("Автомобиль", car);
+    fd.append("_subject", "Заявка с главной (hero)");
+    return { valid: !!(name && phone), fd };
+  });
+
   bindForm("#mainForm", "#formFeedback", () => {
     const name = ($("#userName", root)?.value || "").trim();
     const phone = ($("#userPhone", root)?.value || "").trim();
