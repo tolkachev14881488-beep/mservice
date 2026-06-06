@@ -24,13 +24,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=5" />
+  <link rel="stylesheet" href="./styles.css?v=6" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"AutoRepair","name":"MService","url":"https://mservice.by/","telephone":"+375339116611","image":"https://optim.tildacdn.ink/tild3837-3036-4834-b830-363433323335/-/format/webp/noroot.png.webp","address":{"@type":"PostalAddress","streetAddress":"1-я Транзитная ул., 20А","addressLocality":"Гомель","postalCode":"246013","addressCountry":"BY"},"openingHours":"Mo-Su 09:00-20:00","sameAs":["https://t.me/mservice_gomel","https://www.instagram.com/mservice.gomel/"]}
   </script>
 </head>
 <body>
 <div id="ms-root">
+  <div class="bg-fx" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-fx"></div>
+  </div>
   <div class="progress" id="msProgress" aria-hidden="true"></div>
 
   <header class="site-header" id="siteHeader">
@@ -76,23 +82,24 @@
       <div class="hero-visual" aria-hidden="true">
         <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80" alt="" id="heroImg" width="1600" height="1067" />
         <div class="hero-slice"></div>
+        <div class="hero-glow"></div>
       </div>
       <div class="container hero-wrap">
-        <div class="hero-copy reveal">
-          <div class="hero-tag">Гомель · автосервис №1 по отзывам</div>
-          <h1><span class="h1-line">MSERVICE</span><span class="h1-accent">AUTO</span></h1>
-          <p class="hero-lead">Ремонт двигателей, подвески, диагностика и запчасти. Согласуем смету до начала работ — без сюрпризов.</p>
-          <div class="hero-actions">
-            <button class="btn btn-primary open-modal-btn" type="button">Записаться на ремонт</button>
-            <button class="btn btn-dark open-modal-part-btn" type="button">Заказать запчасти</button>
+        <div class="hero-copy">
+          <div class="hero-tag anim-up" style="--i:0">Гомель · автосервис №1 по отзывам</div>
+          <h1 class="anim-up" style="--i:1"><span class="h1-line">MSERVICE</span><span class="h1-accent">AUTO</span></h1>
+          <p class="hero-lead anim-up" style="--i:2">Ремонт двигателей, подвески, диагностика и запчасти. Согласуем смету до начала работ — без сюрпризов.</p>
+          <div class="hero-actions anim-up" style="--i:3">
+            <button class="btn btn-primary open-modal-btn" type="button"><span>Записаться на ремонт</span></button>
+            <button class="btn btn-glass open-modal-part-btn" type="button"><span>Заказать запчасти</span></button>
           </div>
-          <div class="hero-stats">
+          <div class="hero-stats anim-up" style="--i:4">
             <div><strong>4+</strong><span>года</span></div>
             <div><strong>12</strong><span>мес гарантия</span></div>
             <div><strong>1000+</strong><span>клиентов</span></div>
           </div>
         </div>
-        <aside class="status-panel reveal" style="--d:2">
+        <aside class="status-panel glass anim-up" style="--i:5">
           <div class="status-head">Почему MService</div>
           <ol class="status-list">
             <li><em>01</em><div><strong>Профильный ремонт</strong><span>ДВС, подвеска, электрика по регламенту.</span></div></li>
@@ -104,12 +111,10 @@
       </div>
     </section>
 
-    <div class="trust-ribbon">
-      <div class="container trust-inner">
-        <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg><span><strong>4+ года</strong> на рынке</span></div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg><span><strong>12 мес</strong> гарантия</span></div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg><span><strong>Смета</strong> до начала работ</span></div>
-        <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg><span><strong>VIN</strong>-подбор запчастей</span></div>
+    <div class="trust-marquee">
+      <div class="trust-track">
+        <span>4+ года на рынке</span><span>·</span><span>12 мес гарантия</span><span>·</span><span>Смета до работ</span><span>·</span><span>VIN-подбор</span><span>·</span><span>1000+ клиентов</span><span>·</span>
+        <span>4+ года на рынке</span><span>·</span><span>12 мес гарантия</span><span>·</span><span>Смета до работ</span><span>·</span><span>VIN-подбор</span><span>·</span><span>1000+ клиентов</span><span>·</span>
       </div>
     </div>
 
@@ -121,12 +126,12 @@
           <p class="sec-sub">От регламентного обслуживания до сложного ремонта. Работаем с современным оборудованием и соблюдаем технологию на каждом этапе.</p>
         </div>
         <div class="bento">
-          <article class="panel bento-card span-6 reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 9h1.5c.8 0 1.5-.7 1.5-1.5S17.3 6 16.5 6H15V4.5C15 3.7 14.3 3 13.5 3S12 3.7 12 4.5V6h-1.5C9.7 6 9 6.7 9 7.5S9.7 9 10.5 9H12v1.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V9h1.5zM4 10c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2H4zm2 2h12v8H6v-8z"/></svg></div><h3>Компьютерная диагностика</h3><p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p><div class="bento-meta"><span class="price-tag">от 30 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
-          <article class="panel bento-card span-6 reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><h3>Ремонт двигателей</h3><p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p><div class="bento-meta"><span class="price-tag">от 150 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
-          <article class="panel bento-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div><h3>Ремонт подвески</h3><p>Амортизаторы, рычаги, сайлентблоки, шаровые, регулировка.</p><div class="bento-meta"><span class="price-tag">от 50 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
-          <article class="panel bento-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><h3>Тормозная система</h3><p>Диагностика и обслуживание колодок, дисков, суппортов.</p><div class="bento-meta"><span class="price-tag">от 40 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
-          <article class="panel bento-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>ТО и замена масла</h3><p>Регламентное обслуживание и проверка ключевых узлов.</p><div class="bento-meta"><span class="price-tag">от 80 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
-          <article class="panel bento-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div><h3>Консультация мастера</h3><p>Оптимальный план ремонта и подбор комплектующих.</p><div class="bento-meta"><span class="price-tag">бесплатно</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card span-6 reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 9h1.5c.8 0 1.5-.7 1.5-1.5S17.3 6 16.5 6H15V4.5C15 3.7 14.3 3 13.5 3S12 3.7 12 4.5V6h-1.5C9.7 6 9 6.7 9 7.5S9.7 9 10.5 9H12v1.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V9h1.5zM4 10c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2H4zm2 2h12v8H6v-8z"/></svg></div><h3>Компьютерная диагностика</h3><p>Считывание ошибок, анализ параметров, точный поиск неисправностей.</p><div class="bento-meta"><span class="price-tag">от 30 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card span-6 reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><h3>Ремонт двигателей</h3><p>Текущий и капитальный ремонт ДВС, восстановление ресурса мотора.</p><div class="bento-meta"><span class="price-tag">от 150 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div><h3>Ремонт подвески</h3><p>Амортизаторы, рычаги, сайлентблоки, шаровые, регулировка.</p><div class="bento-meta"><span class="price-tag">от 50 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><h3>Тормозная система</h3><p>Диагностика и обслуживание колодок, дисков, суппортов.</p><div class="bento-meta"><span class="price-tag">от 40 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>ТО и замена масла</h3><p>Регламентное обслуживание и проверка ключевых узлов.</p><div class="bento-meta"><span class="price-tag">от 80 BYN</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
+          <article class="glass bento-card reveal tilt-card" data-tilt><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div><h3>Консультация мастера</h3><p>Оптимальный план ремонта и подбор комплектующих.</p><div class="bento-meta"><span class="price-tag">бесплатно</span><button class="bento-link open-modal-btn" type="button">Записаться →</button></div></article>
         </div>
       </div>
     </section>
@@ -139,12 +144,12 @@
           <p class="sec-sub">Оригинальные и проверенные аналоговые запчасти с быстрым подбором по VIN.</p>
         </div>
         <div class="parts-scroll">
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы и тормозные жидкости.</p></article>
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg></div><h3>Фильтры</h3><p>Масляные, воздушные, топливные и салонные фильтры.</p></article>
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div><h3>Ходовая часть</h3><p>Рычаги, стойки, амортизаторы, опоры и сайлентблоки.</p></article>
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.03 7.03 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.49.42l-.38 2.65c-.62.24-1.21.56-1.7.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46a.5.5 0 0 0 .6.22l2.49-1c.49.42 1.08.74 1.7.98l.38 2.65A.5.5 0 0 0 10 22h4a.5.5 0 0 0 .49-.42l.38-2.65c.62-.24 1.21-.56 1.7-.98l2.49 1a.5.5 0 0 0 .6-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg></div><h3>Двигатель</h3><p>Ремни, ролики, прокладки, цепи, помпы, датчики.</p></article>
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 7H9V5h6v2zm-4 4h4V9h-4v2zm6 4h-2v2h2v-2zM7 7H5v2h2V7zm0 4H5v2h2v-2zm0 4H5v2h2v-2z"/></svg></div><h3>Электрика</h3><p>АКБ, генераторы, стартеры, катушки, свечи, сенсоры.</p></article>
-          <article class="panel part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><h3>Быстрый заказ</h3><p>Поставка редких позиций под конкретную задачу ремонта.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div><h3>Масла и жидкости</h3><p>Моторные, трансмиссионные, антифризы и тормозные жидкости.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg></div><h3>Фильтры</h3><p>Масляные, воздушные, топливные и салонные фильтры.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99z"/></svg></div><h3>Ходовая часть</h3><p>Рычаги, стойки, амортизаторы, опоры и сайлентблоки.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65a.5.5 0 0 0 .12-.64l-2-3.46a.5.5 0 0 0-.6-.22l-2.49 1a7.03 7.03 0 0 0-1.7-.98l-.38-2.65A.5.5 0 0 0 14 2h-4a.5.5 0 0 0-.49.42l-.38 2.65c-.62.24-1.21.56-1.7.98l-2.49-1a.5.5 0 0 0-.6.22l-2 3.46a.5.5 0 0 0 .12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65a.5.5 0 0 0-.12.64l2 3.46a.5.5 0 0 0 .6.22l2.49-1c.49.42 1.08.74 1.7.98l.38 2.65A.5.5 0 0 0 10 22h4a.5.5 0 0 0 .49-.42l.38-2.65c.62-.24 1.21-.56 1.7-.98l2.49 1a.5.5 0 0 0 .6-.22l2-3.46a.5.5 0 0 0-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg></div><h3>Двигатель</h3><p>Ремни, ролики, прокладки, цепи, помпы, датчики.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M15 7H9V5h6v2zm-4 4h4V9h-4v2zm6 4h-2v2h2v-2zM7 7H5v2h2V7zm0 4H5v2h2v-2zm0 4H5v2h2v-2z"/></svg></div><h3>Электрика</h3><p>АКБ, генераторы, стартеры, катушки, свечи, сенсоры.</p></article>
+          <article class="glass part-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><h3>Быстрый заказ</h3><p>Поставка редких позиций под конкретную задачу ремонта.</p></article>
         </div>
         <div class="cta-band reveal">
           <div><strong>Нужна запчасть?</strong><p>Подберём по VIN за 15 минут. Оригинал или качественный аналог — на ваш выбор.</p></div>
@@ -160,7 +165,7 @@
           <h2 class="sec-title">О сервисе MService</h2>
         </div>
         <div class="about-grid">
-          <div class="panel about-text reveal">
+          <div class="glass about-text reveal">
             <p>MService — профильный автосервис в Гомеле с фокусом на качество, прозрачность и результат. Каждый заказ проходит диагностику, согласование работ и финальную проверку.</p>
             <p>Мы не навязываем лишнее — предлагаем только то, что действительно нужно вашему автомобилю.</p>
             <ul class="usp-list">
@@ -171,13 +176,13 @@
           </div>
           <div class="reveal">
             <div class="stats-grid">
-              <div class="panel stat-card"><div class="num" data-target="4">0</div><div class="lbl">лет работы</div></div>
-              <div class="panel stat-card"><div class="num" data-target="1000">0</div><div class="lbl">клиентов</div></div>
-              <div class="panel stat-card"><div class="num" data-target="12">0</div><div class="lbl">мес. гарантия</div></div>
+              <div class="glass stat-card reveal"><div class="num" data-target="4">0</div><div class="lbl">лет работы</div></div>
+              <div class="glass stat-card reveal"><div class="num" data-target="1000">0</div><div class="lbl">клиентов</div></div>
+              <div class="glass stat-card reveal"><div class="num" data-target="12">0</div><div class="lbl">мес. гарантия</div></div>
             </div>
             <div class="features-row">
-              <article class="panel feature-card"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg></div><h3>Контроль качества</h3><p>Проверка перед выдачей машины клиенту.</p></article>
-              <article class="panel feature-card"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div><h3>Чёткий отчёт</h3><p>Понятная смета и рекомендации по обслуживанию.</p></article>
+              <article class="glass feature-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4z"/></svg></div><h3>Контроль качества</h3><p>Проверка перед выдачей машины клиенту.</p></article>
+              <article class="glass feature-card reveal"><div class="bento-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div><h3>Чёткий отчёт</h3><p>Понятная смета и рекомендации по обслуживанию.</p></article>
             </div>
           </div>
         </div>
@@ -217,7 +222,7 @@
           <span class="proof-stars">★★★★★</span>
           <span>1000+ довольных клиентов</span>
         </div>
-        <div class="panel rev-shell reveal" id="revShell">
+        <div class="glass rev-shell reveal" id="revShell">
           <div class="rev-track" id="msRevTrack">
             <article class="rev-slide"><div class="rev-quote">"</div><div class="rev-stars">★★★★★</div><p>Сделали двигатель аккуратно и в срок. Всё объяснили по этапам и по цене. Отличный сервис.</p><div class="rev-author"><div class="rev-avatar">Д</div><div class="rev-name">Дмитрий</div></div></article>
             <article class="rev-slide"><div class="rev-quote">"</div><div class="rev-stars">★★★★★</div><p>По подвеске нашли то, что другие не видели. Качество работ отличное, рекомендую.</p><div class="rev-author"><div class="rev-avatar">А</div><div class="rev-name">Александр</div></div></article>
@@ -240,7 +245,7 @@
           <h2 class="sec-title">Онлайн-запись</h2>
           <p class="sec-sub">Оставьте заявку — мы перезвоним и подберём удобное время.</p>
         </div>
-        <div class="panel form-wrap reveal">
+        <div class="glass form-wrap reveal">
           <form id="mainForm">
             <div class="form-tabs" role="tablist">
               <button class="form-tab on" type="button" data-type="Ремонт" role="tab" aria-selected="true">Ремонт</button>
@@ -266,7 +271,7 @@
           <h2 class="sec-title">Как нас найти</h2>
         </div>
         <div class="contacts-grid">
-          <div class="panel contact-box reveal">
+          <div class="glass contact-box reveal">
             <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg></span><span>Гомель, 1-я Транзитная ул., 20А, 246013</span></div>
             <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.4 4.9 6.2 6.2l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span><span><a href="tel:+375339116611">+375 33 911-66-11</a> (A1, Telegram)</span></div>
             <div class="line"><span class="line-icon"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm9.2 4.6a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zM12 7.4A4.6 4.6 0 1 0 16.6 12 4.6 4.6 0 0 0 12 7.4z"/></svg></span><span><a href="https://www.instagram.com/mservice.gomel/" target="_blank" rel="noopener noreferrer">@mservice.gomel</a></span></div>
@@ -307,7 +312,7 @@
   </nav>
 
   <div class="modal" id="callbackModal" role="dialog" aria-modal="true" aria-labelledby="callbackTitle">
-    <div class="m-content">
+    <div class="m-content glass">
       <button class="m-close" type="button" data-close aria-label="Закрыть">&times;</button>
       <h3 id="callbackTitle">Быстрая запись</h3>
       <form id="modalForm">
@@ -321,7 +326,7 @@
   </div>
 
   <div class="modal" id="vacancyModal" role="dialog" aria-modal="true" aria-labelledby="vacancyTitle">
-    <div class="m-content">
+    <div class="m-content glass">
       <button class="m-close" type="button" data-close aria-label="Закрыть">&times;</button>
       <h3 id="vacancyTitle">Отклик на вакансию мастера</h3>
       <form id="vacancyForm">
@@ -336,7 +341,7 @@
   </div>
 
   <div class="modal" id="contactsModal" role="dialog" aria-modal="true" aria-labelledby="contactsTitle">
-    <div class="m-content lg">
+    <div class="m-content glass lg">
       <button class="m-close" type="button" data-close aria-label="Закрыть">&times;</button>
       <h3 id="contactsTitle">Наши контакты</h3>
       <div class="m-grid">
@@ -353,6 +358,6 @@
     </div>
   </div>
 </div>
-<script src="./main.js?v=5"></script>
+<script src="./main.js?v=6"></script>
 </body>
 </html>

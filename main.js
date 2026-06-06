@@ -39,6 +39,44 @@
   );
   $$(".reveal", root).forEach((el) => io.observe(el));
 
+  // Stagger delays for grid children
+  $$(".bento .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
+  $$(".parts-scroll .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
+  $$(".gallery-grid .reveal", root).forEach((el, i) => el.style.setProperty("--d", i));
+  $$(".stats-grid .stat-card", root).forEach((el, i) => el.style.setProperty("--d", i));
+
+  // 3D tilt on service cards
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    $$("[data-tilt]", root).forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(900px) rotateX(${y * -8}deg) rotateY(${x * 8}deg) translateY(-4px)`;
+      });
+      card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+    });
+  }
+
+  // Active nav link on scroll
+  const navLinks = $$(".nav-desktop a[href^='#']", root);
+  const sectionIds = navLinks.map((a) => a.getAttribute("href")?.slice(1)).filter(Boolean);
+  const sections = sectionIds.map((id) => $("#" + id, root)).filter(Boolean);
+  if (sections.length && navLinks.length) {
+    const navIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+        });
+      },
+      { rootMargin: "-35% 0px -55% 0px", threshold: 0 }
+    );
+    sections.forEach((s) => navIO.observe(s));
+  }
+
   // Header scroll
   const header = $("#siteHeader", root);
   const onScroll = () => {
